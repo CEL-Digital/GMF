@@ -156,12 +156,12 @@ export function Navbar() {
         {/* BOTÃO CTA (Exclusivo com o azul da marca) */}
         <div className="hidden md:flex items-center gap-3">
           <a
-            className="px-4 py-2 text-xs font-semibold text-white bg-brand-dark-blue hover:bg-brand-dark-blue/90 rounded-full transition-all active:scale-95 shadow-sm"
-            href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20an%C3%A1lise%20de%20caso."
+            className="px-4 py-2 text-xs font-semibold bg-brand-dark-blue rounded-full hover:bg-brand-dark-blue/85 transition-colors delay-300"
+            href="https://wa.me/+5511914511407?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20conhecer%20a%20GMF%20Advogados."
             target="_blank"
             rel="noopener noreferrer"
           >
-            Falar no WhatsApp
+            <span className="text-white font-semibold">Falar no WhatsApp</span>
           </a>
         </div>
 
@@ -231,7 +231,7 @@ export function Navbar() {
           <div className="pt-2">
             <a
               className="block text-center w-full px-5 py-2.5 text-sm font-semibold text-white bg-brand-dark-blue hover:bg-brand-dark-blue/90 rounded-full"
-              href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20an%C3%A1lise%20de%20caso."
+              href="https://wa.me/+5511914511407?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20conhecer%20a%20GMF%20Advogados."
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeAllMenus}

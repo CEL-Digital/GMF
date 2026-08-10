@@ -1,17 +1,19 @@
 import heroBackground from "../../../assets/heroBackground.webp";
 
 export function HeroHome() {
-    return (
-        <div className="flex w-full h-screen overflow-hidden">
-            <img src={heroBackground} alt="" className="w-full object-cover object-top"/>
-            <div className="absolute inset-0 flex justify-center items-center flex-col">
-                    <h1 className="font-bold text-6xl text-white text-center">
-                        Transformando a complexidade do sistema <br/>jurídico em segurança e resultados.
-                    </h1>
-                    <p className="text-gray-400 pt-8 text-center">
-                        Defesa especializada com atendimento humanizado, ético e <br/>focado em proteger seus direitos, seu patrimônio e sua família.
-                    </p>
-            </div>
-        </div>
-    )
+  return (
+    <div className="relative flex min-h-screen w-full items-center justify-center overflow-hidden">
+      <img src={heroBackground} alt="" className="h-full w-full absolute inset-0 object-cover object-top" />
+      
+      <div className="relative flex max-w-7xl flex-col items-center justify-center px-4 py-20 text-center">
+        <h1 className="font-news text-3xl font-bold tracking-tighter text-white sm:text:5xl md:text-6xl lg:text-7xl">
+          Transformando a complexidade do sistema jurídico em segurança e resultados
+        </h1>
+        <p className="mt-4 max-w-2xl text-sm text-gray-400 sm:text-base md:text-lg">
+          Defesa especializada com atendimento humanizado, ético e focado em proteger seus direitos, seu patrimônio e sua família.
+        </p>
+        
+      </div>
+    </div>
+  )
 }
