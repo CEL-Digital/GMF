@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import LogoAzul from "../../assets/logoGMFAzulEscuro.webp";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,8 +54,8 @@ export function Navbar() {
       <nav className="w-full max-w-5xl bg-white text-zinc-900 border border-zinc-200 rounded-full px-6 py-2.5 flex items-center justify-between shadow-xl transition-all">
         
         {/* LOGO */}
-        <Link to="/" onClick={closeAllMenus} className="flex items-center gap-2 font-bold text-zinc-900">
-          logo
+        <Link to="/" onClick={closeAllMenus} className="flex items-center size-[5vh]">
+          <img src={LogoAzul} alt="Logo azul" />
         </Link>
 
         {/* LINKS DESKTOP (Texto preto com hover mais claro) */}
@@ -196,35 +197,35 @@ export function Navbar() {
             Sobre
           </Link>
 
-          <div className="space-y-2 pt-2 border-t border-zinc-200">
+          <Link to="/contato" onClick={closeAllMenus} className="block font-medium hover:text-zinc-600">
+            Contato
+          </Link>
+
+          <div className="space-y-2 pt-2">
             <span className="block text-xs font-semibold text-zinc-400 uppercase tracking-wider">
               Áreas de Atuação
             </span>
             <div className="pl-2 space-y-2.5 border-l border-zinc-200">
-              <Link to="/direito-trabalhista" onClick={closeAllMenus} className="block text-sm text-zinc-900 hover:text-zinc-600">
+              <Link to="/direito-trabalhista" onClick={closeAllMenus} className="block text-sm font-medium text-zinc-900 hover:text-zinc-600">
                 Trabalhista
               </Link>
-              <Link to="/direito-civel" onClick={closeAllMenus} className="block text-sm text-zinc-900 hover:text-zinc-600">
+              <Link to="/direito-civel" onClick={closeAllMenus} className="block text-sm font-medium text-zinc-900 hover:text-zinc-600">
                 Cível
               </Link>
-              <Link to="/direito-de-familia" onClick={closeAllMenus} className="block text-sm text-zinc-900 hover:text-zinc-600">
+              <Link to="/direito-de-familia" onClick={closeAllMenus} className="block text-sm font-medium text-zinc-900 hover:text-zinc-600">
                 Família
               </Link>
-              <Link to="/direito-do-consumidor" onClick={closeAllMenus} className="block text-sm text-zinc-900 hover:text-zinc-600">
+              <Link to="/direito-do-consumidor" onClick={closeAllMenus} className="block text-sm font-medium text-zinc-900 hover:text-zinc-600">
                 Consumidor
               </Link>
-              <Link to="/direito-criminal" onClick={closeAllMenus} className="block text-sm text-zinc-900 hover:text-zinc-600">
+              <Link to="/direito-criminal" onClick={closeAllMenus} className="block text-sm font-medium text-zinc-900 hover:text-zinc-600">
                 Criminal
               </Link>
-              <Link to="/direito-previdenciario" onClick={closeAllMenus} className="block text-sm text-zinc-900 hover:text-zinc-600">
+              <Link to="/direito-previdenciario" onClick={closeAllMenus} className="block text-sm font-medium text-zinc-900 hover:text-zinc-600">
                 Previdenciário
               </Link>
             </div>
           </div>
-
-          <Link to="/contato" onClick={closeAllMenus} className="block font-medium hover:text-zinc-600 pt-2 border-t border-zinc-200">
-            Contato
-          </Link>
 
           {/* BOTÃO CTA MOBILE (Azul da marca) */}
           <div className="pt-2">
