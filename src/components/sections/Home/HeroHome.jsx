@@ -61,7 +61,7 @@ export function HeroHome() {
             <span className="w-1 h-[0.7em] bg-white inline-block mr-1 animate-cursor" />
           </span>
         </h1>
-        <p className="mt-4 max-w-2xl text-sm text-gray-400 sm:text-base md:text-lg">
+        <p className="mt-4 max-w-2xl text-sm text-gray-400 sm:text-base md:text-md">
           Defesa especializada com atendimento humanizado, ético e focado em
           proteger seus direitos, seu patrimônio e sua família.
         </p>
