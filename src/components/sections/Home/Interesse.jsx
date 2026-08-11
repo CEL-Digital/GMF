@@ -14,7 +14,7 @@ export function AlertSection() {
           </h2>
           
           <p className="text-zinc-600 text-sm md:text-base mt-4">
-            Identificar o problema no início é fundamental. Veja como os seus direitos se aplicam no dia a dia.
+            Muitas vezes, a violação de um direito começa de forma sutil. Identificar o cenário correto é o primeiro passo para reaver sua tranquilidade.
           </p>
         </div>
 
@@ -107,7 +107,7 @@ export function AlertSection() {
                 Entre em contato com a GMF
               </h3>
               <p className="text-base text-zinc-600 leading-relaxed">
-                Realizamos uma triagem detalhada do seu caso para indicar a estratégia correta, <br />mesmo em demandas jurídicas multidisciplinares.
+                O tempo costuma ser um fator determinante no Direito. <br /> Quanto antes seu caso for analisado por um especialista, maiores são as chances de preservação dos seus direitos.
               </p>
             </div>
 
