@@ -6,13 +6,11 @@ export function btn() {
             target="_blank"
             rel="noopener noreferrer"
             >
-            Camada branca inicial
+            
             <span className="absolute inset-0 bg-white transition-opacity duration-800 group-hover:opacity-0"></span>
             
-            Círculo expandindo a partir do centro
             <span className="absolute aspect-square w-[200%] scale-0 rounded-full bg-brand-dark-blue transition-transform duration-800 ease-in-out group-hover:scale-100"></span>
             
-            Texto
             <span className="relative z-10 transition-colors text-sm duration-1000 ease-in-out group-hover:text-white"> 
                 Falar no WhatsApp
             </span>
