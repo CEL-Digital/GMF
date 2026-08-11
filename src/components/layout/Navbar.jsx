@@ -50,15 +50,15 @@ export function Navbar() {
         isVisible ? "translate-y-0" : "-translate-y-28"
       }`}
     >
-      {/* PÍLULA CONTAINER */}
+      {/* PÍLULA CONTAINER - OPACO SOLID WHITE */}
       <nav className="w-full max-w-5xl bg-white text-zinc-900 border border-zinc-200 rounded-full px-6 py-2.5 flex items-center justify-between shadow-xl transition-all">
         
         {/* LOGO */}
-        <Link to="/" onClick={closeAllMenus} className="flex items-center size-[5vh]">
-          <img src={LogoAzul} alt="Logo azul" />
+        <Link to="/" onClick={closeAllMenus} className="flex items-center h-8">
+          <img src={LogoAzul} alt="GMF Advogados" className="h-full w-auto object-contain" />
         </Link>
 
-        {/* LINKS DESKTOP (Texto preto com hover mais claro) */}
+        {/* LINKS DESKTOP */}
         <div className="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-900">
           <Link to="/" className="hover:text-zinc-600 transition-colors">
             Home
@@ -87,14 +87,14 @@ export function Navbar() {
               </svg>
             </button>
 
-            {/* Menu Suspenso */}
+            {/* Menu Suspenso Sólido */}
             {isAreasOpen && (
               <ul className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-60 bg-white border border-zinc-200 rounded-2xl p-2 shadow-2xl text-sm animate-in fade-in slide-in-from-top-2 duration-200 z-50">
                 <li>
                   <Link
                     to="/direito-trabalhista"
                     onClick={closeAllMenus}
-                    className="block px-4 py-2.5 text-zinc-900 hover:bg-zinc-100 hover:text-zinc-600 rounded-xl transition-colors font-medium"
+                    className="block px-4 py-2.5 text-zinc-900 hover:bg-zinc-100 hover:text-zinc-950 rounded-xl transition-colors font-medium"
                   >
                     Direito Trabalhista
                   </Link>
@@ -103,7 +103,7 @@ export function Navbar() {
                   <Link
                     to="/direito-civel"
                     onClick={closeAllMenus}
-                    className="block px-4 py-2.5 text-zinc-900 hover:bg-zinc-100 hover:text-zinc-600 rounded-xl transition-colors"
+                    className="block px-4 py-2.5 text-zinc-900 hover:bg-zinc-100 hover:text-zinc-950 rounded-xl transition-colors"
                   >
                     Direito Cível
                   </Link>
@@ -112,7 +112,7 @@ export function Navbar() {
                   <Link
                     to="/direito-de-familia"
                     onClick={closeAllMenus}
-                    className="block px-4 py-2.5 text-zinc-900 hover:bg-zinc-100 hover:text-zinc-600 rounded-xl transition-colors"
+                    className="block px-4 py-2.5 text-zinc-900 hover:bg-zinc-100 hover:text-zinc-950 rounded-xl transition-colors"
                   >
                     Direito de Família
                   </Link>
@@ -121,7 +121,7 @@ export function Navbar() {
                   <Link
                     to="/direito-do-consumidor"
                     onClick={closeAllMenus}
-                    className="block px-4 py-2.5 text-zinc-900 hover:bg-zinc-100 hover:text-zinc-600 rounded-xl transition-colors"
+                    className="block px-4 py-2.5 text-zinc-900 hover:bg-zinc-100 hover:text-zinc-950 rounded-xl transition-colors"
                   >
                     Direito do Consumidor
                   </Link>
@@ -130,7 +130,7 @@ export function Navbar() {
                   <Link
                     to="/direito-criminal"
                     onClick={closeAllMenus}
-                    className="block px-4 py-2.5 text-zinc-900 hover:bg-zinc-100 hover:text-zinc-600 rounded-xl transition-colors"
+                    className="block px-4 py-2.5 text-zinc-900 hover:bg-zinc-100 hover:text-zinc-950 rounded-xl transition-colors"
                   >
                     Direito Criminal
                   </Link>
@@ -139,7 +139,7 @@ export function Navbar() {
                   <Link
                     to="/direito-previdenciario"
                     onClick={closeAllMenus}
-                    className="block px-4 py-2.5 text-zinc-900 hover:bg-zinc-100 hover:text-zinc-600 rounded-xl transition-colors"
+                    className="block px-4 py-2.5 text-zinc-900 hover:bg-zinc-100 hover:text-zinc-950 rounded-xl transition-colors"
                   >
                     Direito Previdenciário
                   </Link>
@@ -153,15 +153,15 @@ export function Navbar() {
           </Link>
         </div>
 
-        {/* BOTÃO CTA (Exclusivo com o azul da marca) */}
+        {/* BOTÃO CTA (Azul da Marca) */}
         <div className="hidden md:flex items-center gap-3">
           <a
-            className="px-4 py-2 text-xs font-semibold bg-brand-dark-blue rounded-full hover:bg-brand-dark-blue/85 transition-colors delay-300"
+            className="px-5 py-2 text-xs font-semibold text-white bg-brand-dark-blue hover:bg-brand-dark-blue/90 rounded-full transition-all active:scale-95 shadow-sm"
             href="https://wa.me/+5511914511407?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20conhecer%20a%20GMF%20Advogados."
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="text-white font-semibold">Falar no WhatsApp</span>
+            Falar no WhatsApp
           </a>
         </div>
 
@@ -186,7 +186,7 @@ export function Navbar() {
         </div>
       </nav>
 
-      {/* MENU MOBILE EXPANSÍVEL */}
+      {/* MENU MOBILE EXPANSÍVEL SÓLIDO */}
       {isOpen && (
         <div className="md:hidden absolute top-full left-4 right-4 mt-2 bg-white border border-zinc-200 p-5 rounded-3xl space-y-4 shadow-2xl text-zinc-900 animate-in fade-in slide-in-from-top-2 duration-200">
           <Link to="/" onClick={closeAllMenus} className="block font-medium hover:text-zinc-600">
@@ -201,7 +201,7 @@ export function Navbar() {
             Contato
           </Link>
 
-          <div className="space-y-2 pt-2">
+          <div className="space-y-2 pt-2 border-t border-zinc-100">
             <span className="block text-xs font-semibold text-zinc-400 uppercase tracking-wider">
               Áreas de Atuação
             </span>
@@ -227,7 +227,6 @@ export function Navbar() {
             </div>
           </div>
 
-          {/* BOTÃO CTA MOBILE (Azul da marca) */}
           <div className="pt-2">
             <a
               className="block text-center w-full px-5 py-2.5 text-sm font-semibold text-white bg-brand-dark-blue hover:bg-brand-dark-blue/90 rounded-full"

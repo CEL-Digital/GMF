@@ -53,7 +53,7 @@ export function HeroHome() {
       />
 
       <div className="relative flex max-w-7xl flex-col items-center justify-center px-10 pt-20 text-center">
-        <h1 className="font-news text-3xl font-semibold tracking-tighter text-white sm:text:5xl md:text-5xl lg:text-6xl">
+        <h1 className="font-news text-3xl font-semibold tracking-tighter text-white sm/text:5xl md:text-5xl lg:text-6xl">
           Transformando a complexidade do sistema jurídico em{" "}
           <span>
             {/* Barra piscante na frente/início da palavra */}
@@ -77,7 +77,7 @@ export function HeroHome() {
 
           <span className="absolute aspect-square w-[200%] scale-0 rounded-full bg-brand-dark-blue transition-transform duration-800 ease-in-out group-hover:scale-100"></span>
 
-          <span className="relative z-10 transition-colors text-sm duration-1000 ease-in-out group-hover:text-white">
+          <span className="relative z-10 transition-colors text-md duration-1000 ease-in-out group-hover:text-white">
             Falar no WhatsApp
           </span>
         </a>
