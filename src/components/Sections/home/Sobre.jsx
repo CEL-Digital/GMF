@@ -12,17 +12,13 @@ export function AboutSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Cabeçalho de Entrada */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 gap-6">
           <div>
-            <span className="text-xs font-semibold uppercase tracking-widest text-zinc-400 bg-zinc-900 px-4 py-1.5 rounded-full border border-zinc-800">
-              Sobre o Escritório
-            </span>
             <h2 className="font-news text-3xl md:text-5xl text-white font-semibold mt-6 leading-tight max-w-2xl">
               Advocacia estratégica pautada em <span className="text-zinc-400 italic">excelência e combate técnico.</span>
             </h2>
           </div>
-
-          <p className="text-zinc-400 text-sm md:text-base max-w-md font-light">
+          <p className="text-zinc-400 text-sm md:text-base max-w-md">
             A GMF Advogados une a tradição do rigor jurídico à dinamicidade da advocacia contemporânea, entregando soluções sob medida para cada cliente.
           </p>
         </div>
@@ -32,46 +28,42 @@ export function AboutSection() {
           
           {/* COLUNA 1: Narrativa do Escritório e Pilares (7 colunas) */}
           <div className="lg:col-span-7 flex flex-col justify-between space-y-8">
-            <div className="bg-zinc-900/40 border border-zinc-800/80 rounded-3xl p-8 md:p-10 backdrop-blur-sm space-y-6">
-              <h3 className="text-xl md:text-2xl text-white font-medium">
+            <div className="relative p-8 md:p-10 space-y-6 border-white before:absolute before:inset-y-0 before:left-[2px] before:w-[2px] before:bg-white before:drop-shadow-[0_0_8px_rgba(255,255,255)]">
+              <h3 className="text-xl md:text-2xl text-white font-bold font-news">
                 Uma visão moderna para dilemas jurídicos complexos
               </h3>
               
-              <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light">
+              <p className="text-zinc-400 text-sm md:text-base">
                 Fundada sob a premissa de que nenhum caso é igual ao outro, a <strong className="text-zinc-200 font-medium">GMF Advogados</strong> recusa soluções genéricas. Atuamos de forma incisiva e preventiva na defesa dos interesses de trabalhadores, indivíduos e empresas.
               </p>
 
-              <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light">
+              <p className="text-zinc-400 text-sm md:text-base">
                 Nossa prática alia análise profunda de provas, domínio jurisprudencial e uma comunicação transparente com o cliente do início ao fim do processo.
               </p>
 
               {/* Destaques / Pilares de Atuação */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-zinc-800/60">
                 <div className="flex items-start gap-3">
-                  <span className="text-blue-400 font-mono text-sm mt-0.5">✦</span>
+                  <span className="text-white font-mono text-sm mt-0.5">✦</span>
                   <div>
-                    <h4 className="text-white text-sm font-medium">Atendimento Artesanal</h4>
-                    <p className="text-zinc-500 text-xs mt-1">Análise minuciosa de cada prova e detalhe fático.</p>
+                    <h4 className="text-white text-sm font-medium">Atendimento planejado</h4>
+                    <p className="text-zinc-500 text-xs font-semibold mt-1">Análise minuciosa de cada prova e detalhe fático.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <span className="text-blue-400 font-mono text-sm mt-0.5">✦</span>
+                  <span className="text-white font-mono text-sm mt-0.5">✦</span>
                   <div>
                     <h4 className="text-white text-sm font-medium">Transparência Total</h4>
-                    <p className="text-zinc-500 text-xs mt-1">Acompanhamento em linguagem clara e acessível.</p>
+                    <p className="text-zinc-500 text-xs font-semibold mt-1">Acompanhamento em linguagem clara e acessível.</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Métrica / Números de Impacto em formato editorial */}
-            <div className="grid grid-cols-3 gap-4 bg-zinc-900/20 border border-zinc-800/50 rounded-3xl p-6 text-center">
-              <div>
-                <span className="block font-news text-2xl md:text-4xl font-bold text-white">100%</span>
-                <span className="text-[10px] md:text-xs text-zinc-500 uppercase tracking-wider mt-1 block">Foco no Cliente</span>
-              </div>
-              <div className="border-x border-zinc-800/60">
+            <div className="grid grid-cols-2 gap-4 bg-zinc-900/20 border border-zinc-800/50 rounded-3xl p-6 text-center">
+              <div className="">
                 <span className="block font-news text-2xl md:text-4xl font-bold text-white">Especialista</span>
                 <span className="text-[10px] md:text-xs text-zinc-500 uppercase tracking-wider mt-1 block">Direito Trabalhista</span>
               </div>
@@ -108,26 +100,14 @@ export function AboutSection() {
                 <h3 className="font-news text-2xl text-white font-semibold">
                   Dr. Giovanni França
                 </h3>
-                <p className="text-xs font-mono text-zinc-500 mt-1">
-                  OAB/SP • Advogado Especialista
+                <p className="text-xs font-news text-zinc-500 mt-1">
+                  OAB/SP 506.893 • Advogado Especialista
                 </p>
 
-                <p className="text-zinc-400 text-sm mt-4 font-light leading-relaxed">
+                <p className="text-zinc-400 text-sm mt-4 font-medium">
                   Lidera a bancada jurídica com foco em alta performance técnica, estratégias de negociação e atuação contenciosa firme para a garantia integral dos direitos de seus assessorados.
                 </p>
               </div>
-
-              {/* Botão de Conexão com o Advogado */}
-              <div className="mt-8 pt-6 border-t border-zinc-800">
-                <Link
-                  to="/sobre"
-                  className="w-full py-3 px-6 bg-zinc-800 hover:bg-zinc-700 text-white font-medium rounded-full text-xs transition-all flex items-center justify-center gap-2 group-hover:border group-hover:border-zinc-600"
-                >
-                  <span>Conhecer trajetória completa</span>
-                  <span>→</span>
-                </Link>
-              </div>
-
             </div>
           </div>
 
