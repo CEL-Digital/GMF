@@ -1,15 +1,6 @@
 import { useState } from "react";
 
 export function ContactSection() {
-  const [form, setForm] = useState({ nome: "", telefone: "", mensagem: "" });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Monta a mensagem para enviar direto no WhatsApp do escritório
-    const texto = `Olá! Me chamo ${form.nome}. ${form.mensagem}`;
-    const url = `https://wa.me/+5511914511407?text=${encodeURIComponent(texto)}`;
-    window.open(url, "_blank");
-  };
 
   return (
     <section className="relative w-full bg-zinc-950 py-28 px-6 md:px-12 overflow-hidden border-t border-zinc-900">
@@ -20,32 +11,24 @@ export function ContactSection() {
         
         {/* Cabeçalho */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-semibold uppercase tracking-widest text-zinc-400 bg-zinc-900 px-4 py-1.5 rounded-full border border-zinc-800">
-            Atendimento Exclusivo
-          </span>
           <h2 className="font-news text-3xl md:text-5xl text-white font-semibold mt-6 leading-tight">
             Pronto para analisar o seu caso com <span className="text-zinc-400 italic">um especialista?</span>
           </h2>
-          <p className="text-zinc-400 text-sm md:text-base mt-4 font-light">
+          <p className="text-zinc-400 text-sm md:text-base mt-4">
             Entre em contato para agendar uma consulta presencial ou um atendimento 100% online e seguro.
           </p>
         </div>
 
         {/* Grid Principal: Cartões de Contato + Formulário Direto */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-15 items-center">
           
           {/* COLUNA 1: Canais Diretos & Informações (5 colunas) */}
           <div className="lg:col-span-5 space-y-6">
             
             {/* Card Principal WhatsApp */}
-            <div className="bg-gradient-to-br from-zinc-900/90 to-zinc-900/40 border border-zinc-800 rounded-3xl p-8 backdrop-blur-md relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-green-500/10 blur-2xl rounded-full group-hover:bg-green-500/20 transition-all" />
-              
-              <span className="inline-block p-3 bg-zinc-800/80 rounded-2xl text-green-400 mb-6">
-                💬
-              </span>
-              <h3 className="text-xl text-white font-medium mb-2">Canal Direto no WhatsApp</h3>
-              <p className="text-zinc-400 text-sm font-light mb-6">
+            <div>              
+              <h3 className="text-xl text-white font-news font-bold text-center md:text-left">Canal Direto no WhatsApp</h3>
+              <p className="text-zinc-400 text-sm mb-6 text-center md:text-left">
                 Resposta rápida para triagem de casos e agendamentos de consulta.
               </p>
 
@@ -53,32 +36,30 @@ export function ContactSection() {
                 href="https://wa.me/+5511914511407?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20an%C3%A1lise%20de%20caso."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3.5 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full text-xs transition-all flex items-center justify-center gap-2 shadow-lg shadow-green-950/40"
+                className="w-full py-3.5 px-6 bg-white hover:bg-green-600 text-zinc-900 hover:text-white font-semibold rounded-full text-xs transition-all flex items-center justify-center gap-2 shadow-lg shadow-green-950/40"
               >
                 <span>Iniciar Conversa Agora</span>
-                <span>→</span>
               </a>
             </div>
 
-            {/* Cards Secundários (Localização / E-mail) */}
-            <div className="bg-zinc-900/40 border border-zinc-800/80 rounded-3xl p-8 backdrop-blur-sm space-y-6">
-              <div className="flex items-start gap-4">
-                <span className="text-xl">📍</span>
+            {/* Cards Secundários (Localização) */}
+            <div className="py-4 border-t border-zinc-800/60">
+              <div className="flex items-start">
                 <div>
-                  <h4 className="text-white text-sm font-medium">Localização</h4>
-                  <p className="text-zinc-400 text-xs mt-1 font-light leading-relaxed">
-                    Atendimento presencial com hora marcada e cobertura digital nacional.
-                  </p>
+                  <h4 className="text-white text-2xl font-news font-semibold text-center md:text-left">Localização</h4>
+                  <p className="text-zinc-400 text-sm mb-6 text-center md:text-left">Venha conhecer nosso escritório localizado em <strong>São Bernardo do Campo - São Paulo</strong></p>
                 </div>
               </div>
 
-              <div className="border-t border-zinc-800/60 pt-6 flex items-start gap-4">
-                <span className="text-xl">✉️</span>
-                <div>
-                  <h4 className="text-white text-sm font-medium">Atendimento Digital</h4>
-                  <p className="text-zinc-400 text-xs mt-1 font-light">
-                    contato@gmfadvogados.com.br
-                  </p>
+              <div className="flex items-start">
+                <div className="w-full max-w-2xl mx-auto">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.324468611793!2d-46.55690272462188!3d-23.700104378704737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4232c83568cf%3A0x2b5798134d93f0c0!2sR.%20Ruy%20Barbosa%2C%20133%20-%20Jardim%20Olavo%20Bilac%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009725-780!5e0!3m2!1spt-BR!2sbr!4v1786643995908!5m2!1spt-BR!2sbr" 
+                    className="w-full aspect-video border-0 rounded-2xl shadow-lg invert-[100%] hue-rotate-180 contrast-[95%]" 
+                    allowFullScreen 
+                    loading="lazy" 
+                    referrerPolicy="strict-origin-when-cross-origin"
+                  ></iframe>
                 </div>
               </div>
             </div>
@@ -87,52 +68,53 @@ export function ContactSection() {
 
           {/* COLUNA 2: Formulário Inteligente Rápido (7 colunas) */}
           <div className="lg:col-span-7">
-            <div className="bg-zinc-900/60 border border-zinc-800 rounded-3xl p-8 md:p-10 backdrop-blur-md">
-              <h3 className="text-xl text-white font-medium mb-2">Envie uma mensagem rápida</h3>
-              <p className="text-zinc-400 text-xs md:text-sm font-light mb-8">
+            <div className="relative px-8 md:px-10 py-4 space-y-6 border-white before:absolute before:inset-y-0 before:left-[2px] before:w-[2px] before:bg-white before:drop-shadow-[0_0_8px_rgba(255,255,255)]">
+              <h3 className="text-2xl text-white font-medium mb-2 font-news">Envie uma mensagem rápida</h3>
+              <p className="text-zinc-400 text-sm md:text-base mb-8">
                 Preencha os dados abaixo e você será redirecionado para a nossa equipe com o seu histórico pronto.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form className="space-y-5">
                 <div>
-                  <label className="block text-xs font-mono text-zinc-400 mb-2 uppercase tracking-wider">
-                    Seu Nome
+                  <label className="block text-xs font-news text-white font-medium mb-2">
+                    Nome
                   </label>
                   <input
                     type="text"
-                    required
                     placeholder="Digite seu nome completo"
-                    value={form.nome}
-                    onChange={(e) => setForm({ ...form, nome: e.target.value })}
-                    className="w-full bg-zinc-950/80 border border-zinc-800 rounded-xl px-4 py-3.5 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-zinc-500 transition-colors"
+                    className="w-full bg-zinc-950/80 border border-zinc-900 rounded-xl px-4 py-3.5 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-zinc-800 transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono text-zinc-400 mb-2 uppercase tracking-wider">
+                  <label className="block text-xs font-news text-white font-medium mb-2">
                     Telefone / WhatsApp
                   </label>
                   <input
                     type="tel"
-                    required
                     placeholder="(00) 00000-0000"
-                    value={form.telefone}
-                    onChange={(e) => setForm({ ...form, telefone: e.target.value })}
-                    className="w-full bg-zinc-950/80 border border-zinc-800 rounded-xl px-4 py-3.5 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-zinc-500 transition-colors"
+                    className="w-full bg-zinc-950/80 border border-zinc-900 rounded-xl px-4 py-3.5 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-zinc-800 transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono text-zinc-400 mb-2 uppercase tracking-wider">
+                  <label className="block text-xs font-news text-white font-medium mb-2">
+                    E-mail
+                  </label>
+                  <input
+                    type="tel"
+                    placeholder="email@email.com"
+                    className="w-full bg-zinc-950 border border-zinc-900 rounded-xl px-4 py-3.5 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-zinc-800 transition-colors"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-news text-white font-medium mb-2">
                     Resumo do seu Caso
                   </label>
                   <textarea
-                    rows="3"
-                    required
                     placeholder="Descreva brevemente o que aconteceu..."
-                    value={form.mensagem}
-                    onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
-                    className="w-full bg-zinc-950/80 border border-zinc-800 rounded-xl px-4 py-3.5 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-zinc-500 transition-colors resize-none"
+                    className="w-full bg-zinc-950/80 border border-zinc-900 rounded-xl px-4 py-3.5 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-zinc-800 transition-colors resize-none"
                   ></textarea>
                 </div>
 
@@ -140,7 +122,7 @@ export function ContactSection() {
                   type="submit"
                   className="w-full py-4 px-6 bg-white hover:bg-zinc-200 text-zinc-950 font-semibold rounded-full text-xs transition-all active:scale-[0.99] shadow-xl mt-2"
                 >
-                  Enviar dados via WhatsApp →
+                  Enviar dados via email →
                 </button>
               </form>
             </div>

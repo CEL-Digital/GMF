@@ -103,10 +103,10 @@ export function AlertSection() {
           <div className="lg:col-span-12 bg-white border border-zinc-200/80 rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row items-center justify-between gap-6">
             
             <div className="space-y-2 text-center md:text-left">
-              <h3 className="text-xl md:text-4xl font-news font-bold mb-3">
+              <h3 className="text-left text-xl md:text-4xl font-news font-bold mb-3">
                 Entre em contato com a GMF!
               </h3>
-              <p className="text-base text-zinc-600">
+              <p className="text-base text-zinc-600 text-left">
                 O tempo costuma ser um fator determinante no Direito. <br /> Quanto antes seu caso for analisado por um especialista, maiores são as chances de preservação dos seus direitos.
               </p>
             </div>
