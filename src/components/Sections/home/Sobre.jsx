@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export function AboutSection() {
   return (
-    <section className="relative w-full bg-zinc-950 py-28 px-6 md:px-12 overflow-hidden border-t border-zinc-900">
+    <section id="sobre" className="relative w-full bg-zinc-950 py-28 px-6 md:px-12 overflow-hidden border-t border-zinc-900">
       
       {/* Luz de fundo sutil para profundidade visual */}
       <div className="absolute top-1/4 -right-20 w-[400px] h-[400px] bg-blue-900/10 blur-[130px] rounded-full pointer-events-none" />

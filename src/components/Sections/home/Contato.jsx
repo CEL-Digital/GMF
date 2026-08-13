@@ -1,9 +1,8 @@
 import { useState } from "react";
 
 export function ContactSection() {
-
   return (
-    <section className="relative w-full bg-zinc-950 py-28 px-6 md:px-12 overflow-hidden border-t border-zinc-900">
+    <section id="contato" className="relative w-full bg-zinc-950 py-28 px-6 md:px-12 overflow-hidden border-t border-zinc-900">
       {/* Luz de fundo sutil para efeito visual */}
       <div className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-blue-900/10 blur-[140px] rounded-full pointer-events-none" />
 
@@ -19,13 +18,11 @@ export function ContactSection() {
           </p>
         </div>
 
-        {/* Grid Principal: Cartões de Contato + Formulário Direto */}
+        {/* Grid Principal */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-15 items-center">
           
-          {/* COLUNA 1: Canais Diretos & Informações (5 colunas) */}
+          {/* COLUNA 1: Canais Diretos & Informações */}
           <div className="lg:col-span-5 space-y-6">
-            
-            {/* Card Principal WhatsApp */}
             <div>              
               <h3 className="text-xl text-white font-news font-bold text-center md:text-left">Canal Direto no WhatsApp</h3>
               <p className="text-zinc-400 text-sm mb-6 text-center md:text-left">
@@ -42,12 +39,14 @@ export function ContactSection() {
               </a>
             </div>
 
-            {/* Cards Secundários (Localização) */}
+            {/* Localização */}
             <div className="py-4 border-t border-zinc-800/60">
               <div className="flex items-start">
                 <div>
                   <h4 className="text-white text-2xl font-news font-semibold text-center md:text-left">Localização</h4>
-                  <p className="text-zinc-400 text-sm mb-6 text-center md:text-left">Venha conhecer nosso escritório localizado em <strong>São Bernardo do Campo - São Paulo</strong></p>
+                  <p className="text-zinc-400 text-sm mb-6 text-center md:text-left">
+                    Venha conhecer nosso escritório localizado em <strong>São Bernardo do Campo - São Paulo</strong>
+                  </p>
                 </div>
               </div>
 
@@ -66,7 +65,7 @@ export function ContactSection() {
 
           </div>
 
-          {/* COLUNA 2: Formulário Inteligente Rápido (7 colunas) */}
+          {/* COLUNA 2: Formulário */}
           <div className="lg:col-span-7">
             <div className="relative px-8 md:px-10 py-4 space-y-6 border-white before:absolute before:inset-y-0 before:left-[2px] before:w-[2px] before:bg-white before:drop-shadow-[0_0_8px_rgba(255,255,255)]">
               <h3 className="text-2xl text-white font-medium mb-2 font-news">Envie uma mensagem rápida</h3>
@@ -102,7 +101,7 @@ export function ContactSection() {
                     E-mail
                   </label>
                   <input
-                    type="tel"
+                    type="email"
                     placeholder="email@email.com"
                     className="w-full bg-zinc-950 border border-zinc-900 rounded-xl px-4 py-3.5 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-zinc-800 transition-colors"
                   />
@@ -120,7 +119,7 @@ export function ContactSection() {
 
                 <button
                   type="submit"
-                  className="w-full py-4 px-6 bg-white hover:bg-zinc-200 text-zinc-950 font-semibold rounded-full text-xs transition-all active:scale-[0.99] shadow-xl mt-2"
+                  className="w-full py-4 px-6 bg-white hover:bg-zinc-200 text-zinc-950 font-semibold rounded-full text-xs transition-all active:scale-[0.99] shadow-xl mt-2 cursor-pointer"
                 >
                   Enviar dados via email →
                 </button>

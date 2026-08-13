@@ -1,18 +1,20 @@
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import LogoAzul from "../../assets/logoGMFAzulEscuro.webp";
 
 export function Navbar() {
+  
   const [isOpen, setIsOpen] = useState(false);
   const [isAreasOpen, setIsAreasOpen] = useState(false);
-  
-  // Estados para controlar a rolagem da pílula
+
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const dropdownRef = useRef(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  // Lógica para esconder a pílula ao rolar para baixo e mostrar ao rolar para cima
+  // Lógica para esconder/mostrar pílula ao rolar
   useEffect(() => {
     const controlNavbar = () => {
       if (window.scrollY > lastScrollY && window.scrollY > 100) {
@@ -44,15 +46,26 @@ export function Navbar() {
     setIsAreasOpen(false);
   };
 
+  // Função centralizada para navegar e rolar até a âncora
+  const scrollToAnchor = (sectionId) => {
+    closeAllMenus();
+    if (location.pathname === "/" || location.pathname === "/home") {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      navigate(`/#${sectionId}`);
+    }
+  };
+
   return (
     <header
       className={`fixed top-4 left-0 right-0 z-50 flex justify-center px-4 transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-28"
       }`}
     >
-      {/* PÍLULA CONTAINER - OPACO SOLID WHITE */}
       <nav className="w-full max-w-5xl bg-white text-zinc-900 border border-zinc-200 rounded-full px-6 py-2.5 flex items-center justify-between shadow-xl transition-all">
-        
         {/* LOGO */}
         <Link to="/" onClick={closeAllMenus} className="flex items-center h-8">
           <img src={LogoAzul} alt="GMF Advogados" className="h-full w-auto object-contain" />
@@ -60,13 +73,16 @@ export function Navbar() {
 
         {/* LINKS DESKTOP */}
         <div className="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-900">
-          <Link to="/" className="font-news font-semibold tracking-tighter hover:text-zinc-600 transition-colors">
+          <Link to="/" onClick={closeAllMenus} className="font-news font-semibold tracking-tighter hover:text-zinc-600 transition-colors">
             Home
           </Link>
           
-          <Link to="/sobre" className="font-news font-semibold tracking-tighter hover:text-zinc-600 transition-colors">
+          <button
+            onClick={() => scrollToAnchor("sobre")}
+            className="font-news font-semibold tracking-tighter hover:text-zinc-600 transition-colors cursor-pointer bg-transparent border-0 p-0 text-sm text-zinc-900"
+          >
             Sobre
-          </Link>
+          </button>
 
           {/* DROPDOWN ÁREAS DE ATUAÇÃO */}
           <div ref={dropdownRef} className="relative flex items-center">
@@ -87,7 +103,7 @@ export function Navbar() {
               </svg>
             </button>
 
-            {/* Menu Suspenso Sólido */}
+            {/* Menu Suspenso */}
             {isAreasOpen && (
               <ul className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-60 bg-white border border-zinc-200 rounded-2xl p-2 shadow-2xl text-sm animate-in fade-in slide-in-from-top-2 duration-200 z-50">
                 <li>
@@ -148,12 +164,15 @@ export function Navbar() {
             )}
           </div>
 
-          <Link to="/contato" className="font-news font-semibold tracking-tighter hover:text-zinc-600 transition-colors">
+          <button
+            onClick={() => scrollToAnchor("contato")}
+            className="font-news font-semibold tracking-tighter hover:text-zinc-600 transition-colors cursor-pointer bg-transparent border-0 p-0 text-sm text-zinc-900"
+          >
             Contato
-          </Link>
+          </button>
         </div>
 
-        {/* BOTÃO CTA (Azul da Marca) */}
+        {/* BOTÃO CTA */}
         <div className="hidden md:flex items-center gap-3">
           <a
             className="px-5 py-2 text-xs font-semibold text-white bg-brand-dark-blue hover:bg-brand-dark-blue/90 rounded-full transition-all active:scale-95 shadow-sm"
@@ -186,23 +205,29 @@ export function Navbar() {
         </div>
       </nav>
 
-      {/* MENU MOBILE EXPANSÍVEL SÓLIDO */}
+      {/* MENU MOBILE */}
       {isOpen && (
         <div className="md:hidden absolute top-full left-4 right-4 mt-2 bg-white border border-zinc-200 p-5 rounded-3xl space-y-4 shadow-2xl text-zinc-900 animate-in fade-in slide-in-from-top-2 duration-200">
           <Link to="/" onClick={closeAllMenus} className="font-news font-semibold tracking-tighter block hover:text-zinc-600">
             Home
           </Link>
 
-          <Link to="/sobre" onClick={closeAllMenus} className="font-news font-semibold tracking-tighter block hover:text-zinc-600">
+          <button
+            onClick={() => scrollToAnchor("sobre")}
+            className="font-news font-semibold tracking-tighter block text-left w-full hover:text-zinc-600 bg-transparent border-0 p-0 text-base text-zinc-900"
+          >
             Sobre
-          </Link>
+          </button>
 
-          <Link to="/contato" onClick={closeAllMenus} className="font-news font-semibold tracking-tighter block hover:text-zinc-600">
+          <button
+            onClick={() => scrollToAnchor("contato")}
+            className="font-news font-semibold tracking-tighter block text-left w-full hover:text-zinc-600 bg-transparent border-0 p-0 text-base text-zinc-900"
+          >
             Contato
-          </Link>
+          </button>
 
           <div className="space-y-2 pt-2 border-t border-zinc-100">
-            <span className="block text-xs font-semibold font-news tracking-tighter text-zinc-400 uppercase tracking-wider">
+            <span className="block text-xs font-semibold font-news text-zinc-400 uppercase tracking-wider">
               Áreas de Atuação
             </span>
             <div className="pl-2 space-y-2.5 border-l border-zinc-200">
