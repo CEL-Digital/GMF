@@ -67,13 +67,13 @@ export function Navbar() {
     >
       <nav className="w-full max-w-5xl bg-white text-zinc-900 border border-zinc-200 rounded-full px-6 py-2.5 flex items-center justify-between shadow-xl transition-all">
         {/* LOGO */}
-        <Link to="/" onClick={closeAllMenus} className="flex items-center h-8">
+        <Link to="/#hero" onClick={closeAllMenus} className="flex items-center h-8">
           <img src={LogoAzul} alt="GMF Advogados" className="h-full w-auto object-contain" />
         </Link>
 
         {/* LINKS DESKTOP */}
         <div className="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-900">
-          <Link to="/" onClick={closeAllMenus} className="font-news font-semibold tracking-tighter hover:text-zinc-600 transition-colors">
+          <Link to="/#hero" onClick={closeAllMenus} className="font-news font-semibold tracking-tighter hover:text-zinc-600 transition-colors">
             Home
           </Link>
           
@@ -208,7 +208,7 @@ export function Navbar() {
       {/* MENU MOBILE */}
       {isOpen && (
         <div className="md:hidden absolute top-full left-4 right-4 mt-2 bg-white border border-zinc-200 p-5 rounded-3xl space-y-4 shadow-2xl text-zinc-900 animate-in fade-in slide-in-from-top-2 duration-200">
-          <Link to="/" onClick={closeAllMenus} className="font-news font-semibold tracking-tighter block hover:text-zinc-600">
+          <Link to="/#hero" onClick={closeAllMenus} className="font-news font-semibold tracking-tighter block hover:text-zinc-600">
             Home
           </Link>
 

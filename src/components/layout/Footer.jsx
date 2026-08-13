@@ -1,8 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import imageLogo from "../../assets/logoGMFAzulEscuro.webp";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const scrollToAnchor = (sectionId) => {
+    if(location.pathname === "/" || location.pathname === "/home") {
+      const element = document.getElementById(sectionId)
+      if(element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      navigate(`/#${sectionId}`)
+    }
+  }
 
   return (
     <footer className="w-full bg-zinc-950 text-zinc-400 border-t border-zinc-900 pt-16 pb-12 px-6 md:px-12 relative overflow-hidden">
@@ -22,36 +36,29 @@ export function Footer() {
               <img src={imageLogo} alt="GMF Advogados" className="h-9 w-auto object-contain brightness-0 invert" />
             </Link>
 
-            <p className="text-xs md:text-sm text-zinc-400 max-w-sm font-light leading-relaxed">
+            <p className="text-xs md:text-sm text-zinc-400 max-w-sm">
               Advocacia estratégica e especializada. Combinação entre alto rigor técnico, acompanhamento preventivo e defesa incisiva para a proteção dos seus direitos.
             </p>
-
-            <div className="pt-2">
-              <span className="inline-flex items-center gap-2 text-xs font-mono text-zinc-400 bg-zinc-900/80 px-3 py-1.5 rounded-full border border-zinc-800">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                Atendimento presencial e digital
-              </span>
-            </div>
           </div>
 
           {/* COLUNA 2: Navegação Rápida (3 Colunas) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-xs font-mono uppercase tracking-wider text-white font-semibold">
+            <h4 className="text-xs text-white font-semibold">
               Navegação
             </h4>
-            <ul className="space-y-2.5 text-xs font-light">
+            <ul className="space-y-2.5 text-xs">
               <li>
-                <Link to="/" className="hover:text-white transition-colors">
+                <Link to="/#hero" className="hover:text-white transition-colors">
                   Início (Home)
                 </Link>
               </li>
               <li>
-                <Link to="/sobre" className="hover:text-white transition-colors">
+                <Link to="/#sobre" className="hover:text-white transition-colors">
                   Sobre o Escritório
                 </Link>
               </li>
               <li>
-                <Link to="/contato" className="hover:text-white transition-colors">
+                <Link to="/#contato" className="hover:text-white transition-colors">
                   Falar com um Advogado
                 </Link>
               </li>
