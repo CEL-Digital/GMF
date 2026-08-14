@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// Substitua pelo caminho da foto real do Dr. Giovanni quando tiver
+// Substituir pelo caminho da foto real do Dr. Giovanni quando tiver
 // import doctorPhoto from "../../../assets/giovanni-franca.webp"; 
 
 export function AboutSection() {

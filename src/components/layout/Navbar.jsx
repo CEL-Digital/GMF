@@ -65,7 +65,7 @@ export function Navbar() {
         isVisible ? "translate-y-0" : "-translate-y-28"
       }`}
     >
-      <nav className="w-full max-w-5xl bg-white text-zinc-900 border border-zinc-200 rounded-full px-6 py-2.5 flex items-center justify-between shadow-xl transition-all">
+      <nav className="w-full max-w-5xl bg-gray-50 text-zinc-900 rounded-full px-6 py-2.5 flex items-center justify-between shadow-md transition-all">
         {/* LOGO */}
         <Link to="/#hero" onClick={closeAllMenus} className="flex items-center h-8">
           <img src={LogoAzul} alt="GMF Advogados" className="h-full w-auto object-contain" />
