@@ -9,6 +9,7 @@ import { DireitoPrevidenciario } from "./routes/DireitoPrevidenciario"
 import { DireitoConsumidor } from "./routes/DireitoConsumidor"
 import { PoliticaDePrivacidade } from "./routes/PoliticaDePrivacidade.jsx"
 import { Footer } from "./components/layout/Footer"
+import { CookieBanner } from "./components/layout/CookiesBanner.jsx"
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidade />}/>
       </Routes>
       <Footer />
+      <CookieBanner />
     </div>
     </>
   )

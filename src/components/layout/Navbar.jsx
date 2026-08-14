@@ -105,7 +105,7 @@ export function Navbar() {
 
             {/* Menu Suspenso */}
             {isAreasOpen && (
-              <ul className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-60 bg-white border border-zinc-200 rounded-2xl p-2 shadow-2xl text-sm animate-in fade-in slide-in-from-top-2 duration-200 z-50">
+              <ul className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-60 bg-gray-50 border border-zinc-200 rounded-2xl p-2 shadow-2xl text-sm animate-in fade-in slide-in-from-top-2 duration-200 z-50">
                 <li>
                   <Link
                     to="/direito-trabalhista"
@@ -207,7 +207,7 @@ export function Navbar() {
 
       {/* MENU MOBILE */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-4 right-4 mt-2 bg-white border border-zinc-200 p-5 rounded-3xl space-y-4 shadow-2xl text-zinc-900 animate-in fade-in slide-in-from-top-2 duration-200">
+        <div className="md:hidden absolute top-full left-4 right-4 mt-2 bg-gray-50 border border-zinc-200 p-5 rounded-3xl space-y-4 shadow-2xl text-zinc-900 animate-in fade-in slide-in-from-top-2 duration-200">
           <Link to="/#hero" onClick={closeAllMenus} className="font-news font-semibold tracking-tighter block hover:text-zinc-600">
             Home
           </Link>
@@ -226,7 +226,7 @@ export function Navbar() {
             Contato
           </button>
 
-          <div className="space-y-2 pt-2 border-t border-zinc-100">
+          <div className="space-y-2 pt-2">
             <span className="block text-xs font-semibold font-news text-zinc-400 uppercase tracking-wider">
               Áreas de Atuação
             </span>

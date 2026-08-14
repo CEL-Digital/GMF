@@ -73,7 +73,7 @@ export function HeroHome() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span className="absolute inset-0 bg-white transition-opacity duration-800 group-hover:opacity-0"></span>
+          <span className="absolute inset-0 bg-gray-50 transition-opacity duration-800 group-hover:opacity-0"></span>
 
           <span className="absolute aspect-square w-[200%] scale-0 rounded-full bg-brand-dark-blue transition-transform duration-800 ease-in-out group-hover:scale-100"></span>
 
