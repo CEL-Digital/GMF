@@ -7,6 +7,7 @@ import { DireitoFamilia } from "./routes/DireitoFamilia"
 import { DireitoTrabalhista } from "./routes/DireitoTrabalhista"
 import { DireitoPrevidenciario } from "./routes/DireitoPrevidenciario"
 import { DireitoConsumidor } from "./routes/DireitoConsumidor"
+import { PoliticaDePrivacidade } from "./routes/PoliticaDePrivacidade.jsx"
 import { Footer } from "./components/layout/Footer"
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/direito-do-consumidor" element={<DireitoConsumidor />}/>
         <Route path="/direito-criminal" element={<DireitoCriminal />}/>
         <Route path="/direito-previdenciario" element={<DireitoPrevidenciario />}/>
+        <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidade />}/>
       </Routes>
       <Footer />
     </div>

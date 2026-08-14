@@ -77,7 +77,7 @@ export function HeroHome() {
 
           <span className="absolute aspect-square w-[200%] scale-0 rounded-full bg-brand-dark-blue transition-transform duration-800 ease-in-out group-hover:scale-100"></span>
 
-          <span className="relative z-10 transition-colors text-md duration-1000 ease-in-out group-hover:text-white">
+          <span className="relative z-10 transition-colors text-sm font-semibold duration-1000 ease-in-out group-hover:text-white">
             Falar no WhatsApp
           </span>
         </a>

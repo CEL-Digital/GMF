@@ -49,7 +49,7 @@ export function Footer() {
             <ul className="space-y-2.5 text-xs">
               <li>
                 <Link to="/#hero" className="hover:text-white transition-colors">
-                  Início (Home)
+                  Início
                 </Link>
               </li>
               <li>
@@ -62,15 +62,20 @@ export function Footer() {
                   Falar com um Advogado
                 </Link>
               </li>
+              <li>
+                <Link to="/politica-de-privacidade" className="hover:text-white transition-colors">
+                  Política de Privacidade
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* COLUNA 3: Áreas de Atuação (4 Colunas) */}
           <div className="lg:col-span-4 space-y-4">
-            <h4 className="text-xs font-mono uppercase tracking-wider text-white font-semibold">
+            <h4 className="text-xs text-white font-semibold font-news">
               Áreas de Atuação
             </h4>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-light">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
               <li>
                 <Link to="/direito-trabalhista" className="hover:text-white transition-colors">
                   Trabalhista
@@ -113,7 +118,7 @@ export function Footer() {
           </div>
 
           <div className="text-center md:text-right space-y-1">
-            <p>Dr. Giovanni França • OAB/SP</p>
+            <p className="font-news">Dr. Giovanni França • OAB/SP 506.893</p>
             <p className="text-zinc-400">Este site não realiza consultas públicas genéricas e respeita as diretrizes do Código de Ética da OAB.</p>
           </div>
         </div>
