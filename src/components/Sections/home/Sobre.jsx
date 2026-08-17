@@ -62,16 +62,16 @@ export function AboutSection() {
             </div>
 
             {/* Métrica / Números de Impacto em formato editorial */}
-            <div className="grid grid-cols-2 gap-4 bg-zinc-900/20 border border-zinc-800/50 rounded-3xl p-6 text-center">
-              <div className="">
-                <span className="block font-news text-2xl md:text-4xl font-bold text-white">Especialista</span>
-                <span className="text-[10px] md:text-xs text-zinc-500 uppercase tracking-wider mt-1 block">Direito Trabalhista</span>
-              </div>
-              <div>
-                <span className="block font-news text-2xl md:text-4xl font-bold text-white">Agilidade</span>
-                <span className="text-[10px] md:text-xs text-zinc-500 uppercase tracking-wider mt-1 block">Atendimento Digital</span>
-              </div>
-            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-zinc-900/20 border border-zinc-800/50 rounded-3xl p-6 text-center">
+  <div>
+    <span className="block font-news text-2xl md:text-4xl font-bold text-white">Especialista</span>
+    <span className="text-[10px] md:text-xs text-zinc-500 uppercase tracking-wider mt-1 block">Direito Trabalhista</span>
+  </div>
+  <div>
+    <span className="block font-news text-2xl md:text-4xl font-bold text-white">Agilidade</span>
+    <span className="text-[10px] md:text-xs text-zinc-500 uppercase tracking-wider mt-1 block">Atendimento Digital</span>
+  </div>
+</div>
           </div>
 
           {/* COLUNA 2: Card do Dr. Giovanni França (5 colunas) */}

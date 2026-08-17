@@ -120,7 +120,7 @@ export function AlertSection() {
             >
               <span className="absolute inset-0 bg-black translate-y-[-100%] group-hover:translate-y-0 transition-transform duration-400 z-0"></span>
               <span className="relative z-10 group-hover:text-white transition-colors duration-400">
-                Consultar Especialista Agora →
+                Consultar Especialista Agora
               </span>
             </a>
             </div>
