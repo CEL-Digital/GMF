@@ -45,7 +45,10 @@ export function HeroHome() {
   }, [textoAtual, estaDeletando, indexPalavra]);
 
   return (
-    <div id="hero" className="relative flex flex-col min-h-screen w-full items-center justify-center overflow-hidden">
+    <div
+      id="hero"
+      className="relative flex flex-col min-h-screen w-full items-center justify-center overflow-hidden"
+    >
       <img
         src={heroBackground}
         alt=""

@@ -1,22 +1,22 @@
 const processStepsData = [
   {
     step: "01",
-    title: "Análise Preliminar",
-    desc: "Avaliamos suas mensagens, holerites, extratos e documentos para identificar as irregularidades cometidas pelo empregador.",
+    title: "Atendimento Imediato",
+    desc: "Intervenção técnica imediata em delegacias ou órgãos policiais para garantir o cumprimento estrito dos direitos constitucionais.",
   },
   {
     step: "02",
-    title: "Cálculo do Passivo",
-    desc: "Apuramos detalhadamente todos os valores rescisórios, adicionais e indenizações devidas antes de dar andamento.",
+    title: "Estratégia & Provas",
+    desc: "Análise minuciosa dos fatos e inquérito para levantamento de depoimentos, perícias e fundamentação legal rigorosa da tese de defesa.",
   },
   {
     step: "03",
-    title: "Estratégia & Ação",
-    desc: "Buscamos o acordo extrajudicial célere ou ingressamos com a Ação Trabalhista com tese fundamentada perante a Justiça do Trabalho.",
+    title: "Atuação Processual",
+    desc: "Acompanhamento pessoal em todas as fases da ação penal, sustentação oral e interposição de recursos cabíveis perante os tribunais.",
   },
 ];
 
-export function ProcessoTrabalhista() {
+export function ProcessoCriminal() {
   return (
     <section className="bg-white border-y border-zinc-200 py-20 px-6 md:px-12 mb-24">
       <div className="max-w-7xl mx-auto">
@@ -25,7 +25,7 @@ export function ProcessoTrabalhista() {
             Transparência
           </span>
           <h2 className="font-news text-2xl md:text-4xl text-zinc-950 font-semibold mt-6">
-            Como atuamos na defesa do seu caso
+            Como atuamos na defesa do seu caso penal
           </h2>
         </div>
 

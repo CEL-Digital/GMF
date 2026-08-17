@@ -1,18 +1,19 @@
-const whatsappMessage =
-  "Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20consulta%20sobre%20Direito%20Trabalhista.";
 import { ArrowRight } from "lucide-react";
 
-export function CtaFinalTrabalhista() {
+const whatsappMessage =
+  "Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20consulta%20sobre%20Direito%20C%C3%ADvel.";
+
+export function CtaFinalCivel() {
   return (
     <section className="px-6 md:px-12 max-w-7xl mx-auto">
       <div className="bg-zinc-950 text-white rounded-3xl p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
         <div className="max-w-2xl space-y-3 text-center md:text-left">
           <h2 className="font-news text-2xl md:text-4xl font-semibold">
-            Precisa avaliar seu caso?
+            Precisa resguardar seu patrimônio ou resolver um contrato?
           </h2>
           <p className="text-sm text-zinc-400">
-            Prazos trabalhistas são rígidos. Envie uma mensagem e obtenha o
-            diagnóstico de seu caso.
+            Fale com nossa equipe técnica para analisar seu caso e garantir a
+            melhor solução jurídica.
           </p>
         </div>
 

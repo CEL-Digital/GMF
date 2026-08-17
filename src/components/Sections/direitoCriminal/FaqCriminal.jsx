@@ -2,29 +2,28 @@ import { useState } from "react";
 
 const faqData = [
   {
-    question: "Quanto tempo tenho para entrar com uma ação trabalhista?",
+    question: "Fui intimado a depor na delegacia. Preciso ir com advogado?",
     answer:
-      "O prazo legal é de até 2 anos após o desligamento da empresa. Na ação, é possível cobrar os direitos referentes aos últimos 5 anos trabalhados.",
+      "Sim. O depoimento na fase policial é determinante para o rumo do caso. Estar acompanhado de um advogado garante que suas prerrogativas sejam respeitadas e previne que declarações mal interpretadas gerem acusações.",
   },
   {
-    question: "Quais documentos preciso ter em mãos para a primeira consulta?",
+    question: "O que é a Audiência de Custódia?",
     answer:
-      "Sua Carteira de Trabalho (física ou digital), Termo de Rescisão (TRCT), últimos holerites, extrato analítico do FGTS e provas de conversas (mensagens, e-mails ou fotos).",
+      "É o ato em que a pessoa presa em flagrante é levada em até 24 horas diante de um juiz para avaliar a legalidade da prisão, necessidade de manutenção do término preventivo ou concessão de liberdade provisória.",
   },
   {
-    question: "Posso entrar com ação mesmo sem ter carteira assinada?",
+    question: "A pessoa pode responder ao processo criminal em liberdade?",
     answer:
-      "Sim. Se você cumpria horários, recebia ordens e recebia salário, a Justiça reconhece o vínculo empregatício e garante todos os direitos do período retroativo.",
+      "Sim. A regra constitucional é responder em liberdade. A prisão cautelar só deve ocorrer em casos excepcionais previstos em lei, quando preenchidos os requisitos rigorosos do Código de Processo Penal.",
   },
   {
-    question:
-      "Preciso ir pessoalmente até o escritório para iniciar o processo?",
+    question: "O que fazer em casos de busca e apreensão no meu endereço?",
     answer:
-      "Não obrigatoriamente. Realizamos o atendimento, análise documental e assinatura do contrato de forma 100% digital e segura.",
+      "Exija a apresentação da ordem judicial (mandado) e a identificação dos policiais. Mantenha a calma, acione seu advogado imediatamente e exija a presença de testemunhas durante toda a diligência.",
   },
 ];
 
-export function FaqTrabalhista() {
+export function FaqCriminal() {
   const [openFaq, setOpenFaq] = useState(null);
 
   const toggleFaq = (index) => {
@@ -38,7 +37,7 @@ export function FaqTrabalhista() {
           Tire Suas Dúvidas
         </span>
         <h2 className="font-news text-2xl md:text-3xl text-zinc-950 font-semibold mt-6">
-          Perguntas Frequentes sobre Direitos Trabalhistas
+          Perguntas Frequentes sobre Direito Criminal
         </h2>
       </div>
 
@@ -46,7 +45,7 @@ export function FaqTrabalhista() {
         {faqData.map((item, index) => (
           <div
             key={index}
-            className="bg-white border border-zinc-200 rounded-2xl overflow-hidden transition-all "
+            className="bg-white border border-zinc-200 rounded-2xl overflow-hidden transition-all"
           >
             <button
               onClick={() => toggleFaq(index)}

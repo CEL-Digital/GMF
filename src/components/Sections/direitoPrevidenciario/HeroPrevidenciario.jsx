@@ -1,16 +1,18 @@
-// Conteúdo declarativo direto no arquivo da seção
 const heroData = {
-  badge: "Direito do Trabalho",
-  title: "Proteção e garantia dos seus direitos trabalhistas",
+  badge: "Direito Previdenciário",
+  title: "Proteção e garantia dos seus benefícios no INSS",
   subtitle:
-    "Atuação especializada para reparar injustiças na relação de trabalho, recuperar verbas não pagas e garantir uma rescisão justa.",
+    "Atuação especializada para concessão, restabelecimento e revisão de aposentadorias, auxílios e benefícios assistenciais com máxima agilidade.",
   whatsappMessage:
-    "Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20consulta%20sobre%20Direito%20Trabalhista.",
+    "Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20consulta%20sobre%20Direito%20Previdenci%C3%A1rio.",
 };
 
-export function HeroTrabalhista() {
+export function HeroPrevidenciario() {
   return (
-    <section id="trabalhista" className="px-6 md:px-12 max-w-7xl mx-auto mb-20">
+    <section
+      id="previdenciario"
+      className="px-6 md:px-12 max-w-7xl mx-auto mb-20"
+    >
       <div className="max-w-3xl">
         <span className="text-xs font-semibold text-zinc-600 py-1.5">
           {heroData.badge}
@@ -31,7 +33,7 @@ export function HeroTrabalhista() {
           >
             <span className="absolute inset-0 bg-brand-dark-blue translate-y-[-100%] group-hover:translate-y-0 transition-transform duration-400 z-0"></span>
             <span className="relative z-10 group-hover:text-white transition-colors duration-400">
-              Falar com Advogado Trabalhista
+              Falar com Advogado Previdenciário
             </span>
           </a>
         </div>

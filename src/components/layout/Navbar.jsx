@@ -3,7 +3,6 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import LogoAzul from "../../assets/logoGMFAzulEscuro.webp";
 
 export function Navbar() {
-  
   const [isOpen, setIsOpen] = useState(false);
   const [isAreasOpen, setIsAreasOpen] = useState(false);
 
@@ -67,16 +66,28 @@ export function Navbar() {
     >
       <nav className="w-full max-w-5xl bg-gray-50 text-zinc-900 rounded-full px-6 py-2.5 flex items-center justify-between shadow-md transition-all">
         {/* LOGO */}
-        <Link to="/#hero" onClick={closeAllMenus} className="flex items-center h-8">
-          <img src={LogoAzul} alt="GMF Advogados" className="h-full w-auto object-contain" />
+        <Link
+          to="/#hero"
+          onClick={closeAllMenus}
+          className="flex items-center h-8"
+        >
+          <img
+            src={LogoAzul}
+            alt="GMF Advogados"
+            className="h-full w-auto object-contain"
+          />
         </Link>
 
         {/* LINKS DESKTOP */}
         <div className="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-900">
-          <Link to="/#hero" onClick={closeAllMenus} className="font-news font-semibold tracking-tighter hover:text-zinc-600 transition-colors">
+          <Link
+            to="/#hero"
+            onClick={closeAllMenus}
+            className="font-news font-semibold tracking-tighter hover:text-zinc-600 transition-colors"
+          >
             Home
           </Link>
-          
+
           <button
             onClick={() => scrollToAnchor("sobre")}
             className="font-news font-semibold tracking-tighter hover:text-zinc-600 transition-colors cursor-pointer bg-transparent border-0 p-0 text-sm text-zinc-900"
@@ -99,7 +110,12 @@ export function Navbar() {
                 stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
             </button>
 
@@ -194,11 +210,26 @@ export function Navbar() {
             className="text-zinc-900 hover:text-zinc-600 focus:outline-none p-1.5"
             aria-label="Abrir Menu"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               {isOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               )}
             </svg>
           </button>
@@ -208,7 +239,11 @@ export function Navbar() {
       {/* MENU MOBILE */}
       {isOpen && (
         <div className="md:hidden absolute top-full left-4 right-4 mt-2 bg-gray-50 border border-zinc-200 p-5 rounded-3xl space-y-4 shadow-2xl text-zinc-900 animate-in fade-in slide-in-from-top-2 duration-200">
-          <Link to="/#hero" onClick={closeAllMenus} className="font-news font-semibold tracking-tighter block hover:text-zinc-600">
+          <Link
+            to="/#hero"
+            onClick={closeAllMenus}
+            className="font-news font-semibold tracking-tighter block hover:text-zinc-600"
+          >
             Home
           </Link>
 
@@ -231,22 +266,46 @@ export function Navbar() {
               Áreas de Atuação
             </span>
             <div className="pl-2 space-y-2.5 border-l border-zinc-200">
-              <Link to="/direito-trabalhista" onClick={closeAllMenus} className="font-news font-semibold tracking-tighter block text-sm font-medium text-zinc-900 hover:text-zinc-600">
+              <Link
+                to="/direito-trabalhista"
+                onClick={closeAllMenus}
+                className="font-news font-semibold tracking-tighter block text-sm font-medium text-zinc-900 hover:text-zinc-600"
+              >
                 Trabalhista
               </Link>
-              <Link to="/direito-civel" onClick={closeAllMenus} className="font-news font-semibold tracking-tighter block text-sm font-medium text-zinc-900 hover:text-zinc-600">
+              <Link
+                to="/direito-civel"
+                onClick={closeAllMenus}
+                className="font-news font-semibold tracking-tighter block text-sm font-medium text-zinc-900 hover:text-zinc-600"
+              >
                 Cível
               </Link>
-              <Link to="/direito-de-familia" onClick={closeAllMenus} className="font-news font-semibold tracking-tighter block text-sm font-medium text-zinc-900 hover:text-zinc-600">
+              <Link
+                to="/direito-de-familia"
+                onClick={closeAllMenus}
+                className="font-news font-semibold tracking-tighter block text-sm font-medium text-zinc-900 hover:text-zinc-600"
+              >
                 Família
               </Link>
-              <Link to="/direito-do-consumidor" onClick={closeAllMenus} className="font-news font-semibold tracking-tighter block text-sm font-medium text-zinc-900 hover:text-zinc-600">
+              <Link
+                to="/direito-do-consumidor"
+                onClick={closeAllMenus}
+                className="font-news font-semibold tracking-tighter block text-sm font-medium text-zinc-900 hover:text-zinc-600"
+              >
                 Consumidor
               </Link>
-              <Link to="/direito-criminal" onClick={closeAllMenus} className="font-news font-semibold tracking-tighter block text-sm font-medium text-zinc-900 hover:text-zinc-600">
+              <Link
+                to="/direito-criminal"
+                onClick={closeAllMenus}
+                className="font-news font-semibold tracking-tighter block text-sm font-medium text-zinc-900 hover:text-zinc-600"
+              >
                 Criminal
               </Link>
-              <Link to="/direito-previdenciario" onClick={closeAllMenus} className="font-news font-semibold tracking-tighter block text-sm font-medium text-zinc-900 hover:text-zinc-600">
+              <Link
+                to="/direito-previdenciario"
+                onClick={closeAllMenus}
+                className="font-news font-semibold tracking-tighter block text-sm font-medium text-zinc-900 hover:text-zinc-600"
+              >
                 Previdenciário
               </Link>
             </div>

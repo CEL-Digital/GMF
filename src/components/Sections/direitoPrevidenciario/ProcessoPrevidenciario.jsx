@@ -1,22 +1,22 @@
 const processStepsData = [
   {
     step: "01",
-    title: "Análise Preliminar",
-    desc: "Avaliamos suas mensagens, holerites, extratos e documentos para identificar as irregularidades cometidas pelo empregador.",
+    title: "Análise do Histórico (CNIS)",
+    desc: "Revisamos todo o seu Extrato de Contribuições (CNIS), carnês, carteiras de trabalho e laudos para identificar inconsistências.",
   },
   {
     step: "02",
-    title: "Cálculo do Passivo",
-    desc: "Apuramos detalhadamente todos os valores rescisórios, adicionais e indenizações devidas antes de dar andamento.",
+    title: "Requerimento Administrativo",
+    desc: "Ingressamos com o pedido formal no INSS devidamente instruído com as provas documentais necessárias para evitar o indeferimento.",
   },
   {
     step: "03",
-    title: "Estratégia & Ação",
-    desc: "Buscamos o acordo extrajudicial célere ou ingressamos com a Ação Trabalhista com tese fundamentada perante a Justiça do Trabalho.",
+    title: "Ação Judicial & Perícia",
+    desc: "Em caso de negativa injusta do INSS, levamos o caso à Justiça Federal para realização de perícia neutra e busca dos valores retroativos.",
   },
 ];
 
-export function ProcessoTrabalhista() {
+export function ProcessoPrevidenciario() {
   return (
     <section className="bg-white border-y border-zinc-200 py-20 px-6 md:px-12 mb-24">
       <div className="max-w-7xl mx-auto">
@@ -25,7 +25,7 @@ export function ProcessoTrabalhista() {
             Transparência
           </span>
           <h2 className="font-news text-2xl md:text-4xl text-zinc-950 font-semibold mt-6">
-            Como atuamos na defesa do seu caso
+            Como atuamos na defesa do seu benefício
           </h2>
         </div>
 

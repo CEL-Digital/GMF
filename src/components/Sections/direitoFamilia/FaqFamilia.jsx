@@ -2,29 +2,28 @@ import { useState } from "react";
 
 const faqData = [
   {
-    question: "Quanto tempo tenho para entrar com uma ação trabalhista?",
+    question: "É possível fazer o divórcio diretamente em cartório?",
     answer:
-      "O prazo legal é de até 2 anos após o desligamento da empresa. Na ação, é possível cobrar os direitos referentes aos últimos 5 anos trabalhados.",
+      "Sim. O divórcio extrajudicial em cartório é permitido quando há consenso entre o casal e não existem filhos menores ou incapazes (ou quando as questões relativas a eles já foram resolvidas judicialmente).",
   },
   {
-    question: "Quais documentos preciso ter em mãos para a primeira consulta?",
+    question: "Como é calculado o valor da pensão alimentícia?",
     answer:
-      "Sua Carteira de Trabalho (física ou digital), Termo de Rescisão (TRCT), últimos holerites, extrato analítico do FGTS e provas de conversas (mensagens, e-mails ou fotos).",
+      "Não existe uma porcentagem fixa de 30% estipulada em lei. O valor é apurado com base no binômio necessidade de quem recebe e possibilidade financeira de quem paga.",
   },
   {
-    question: "Posso entrar com ação mesmo sem ter carteira assinada?",
+    question: "O que significa a guarda compartilhada na prática?",
     answer:
-      "Sim. Se você cumpria horários, recebia ordens e recebia salário, a Justiça reconhece o vínculo empregatício e garante todos os direitos do período retroativo.",
+      "Na guarda compartilhada, a responsabilização e as decisões sobre a vida da criança (escola, saúde, educação) são tomadas por ambos os pais, não devendo ser confundida com divisão exata de dias de convivência.",
   },
   {
-    question:
-      "Preciso ir pessoalmente até o escritório para iniciar o processo?",
+    question: "Quanto tempo demora o processo de inventário?",
     answer:
-      "Não obrigatoriamente. Realizamos o atendimento, análise documental e assinatura do contrato de forma 100% digital e segura.",
+      "O inventário em cartório (extrajudicial) pode ser finalizado em poucas semanas se houver consenso entre os herdeiros. Já o inventário judicial depende da complexidade do patrimônio e divergências.",
   },
 ];
 
-export function FaqTrabalhista() {
+export function FaqFamilia() {
   const [openFaq, setOpenFaq] = useState(null);
 
   const toggleFaq = (index) => {
@@ -38,7 +37,7 @@ export function FaqTrabalhista() {
           Tire Suas Dúvidas
         </span>
         <h2 className="font-news text-2xl md:text-3xl text-zinc-950 font-semibold mt-6">
-          Perguntas Frequentes sobre Direitos Trabalhistas
+          Perguntas Frequentes sobre Direito de Família
         </h2>
       </div>
 
@@ -46,7 +45,7 @@ export function FaqTrabalhista() {
         {faqData.map((item, index) => (
           <div
             key={index}
-            className="bg-white border border-zinc-200 rounded-2xl overflow-hidden transition-all "
+            className="bg-white border border-zinc-200 rounded-2xl overflow-hidden transition-all"
           >
             <button
               onClick={() => toggleFaq(index)}

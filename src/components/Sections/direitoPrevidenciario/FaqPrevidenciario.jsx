@@ -2,29 +2,28 @@ import { useState } from "react";
 
 const faqData = [
   {
-    question: "Quanto tempo tenho para entrar com uma ação trabalhista?",
+    question: "O INSS negou meu benefício, ainda posso conseguir?",
     answer:
-      "O prazo legal é de até 2 anos após o desligamento da empresa. Na ação, é possível cobrar os direitos referentes aos últimos 5 anos trabalhados.",
+      "Sim. A negativa administrativa do INSS não é definitiva. É possível ingressar com uma Ação Judicial na Justiça Federal, onde o caso será analisado por um juiz imparcial e peritos independentes.",
   },
   {
-    question: "Quais documentos preciso ter em mãos para a primeira consulta?",
+    question: "O que é o BPC/LOAS e quem tem direito?",
     answer:
-      "Sua Carteira de Trabalho (física ou digital), Termo de Rescisão (TRCT), últimos holerites, extrato analítico do FGTS e provas de conversas (mensagens, e-mails ou fotos).",
+      "É um benefício assistencial de um salário mínimo mensal destinado a idosos com 65 anos ou mais e pessoas com deficiência de qualquer idade que comprovem não possuir meios de prover a própria manutenção.",
   },
   {
-    question: "Posso entrar com ação mesmo sem ter carteira assinada?",
+    question: "Quais documentos preciso ter para dar entrada no pedido?",
     answer:
-      "Sim. Se você cumpria horários, recebia ordens e recebia salário, a Justiça reconhece o vínculo empregatício e garante todos os direitos do período retroativo.",
+      "RG, CPF, comprovante de residência, Carteiras de Trabalho (CTPS), carnês de contribuição, extrato do CNIS e, para casos de incapacidade, laudos, exames e atestados médicos atualizados.",
   },
   {
-    question:
-      "Preciso ir pessoalmente até o escritório para iniciar o processo?",
+    question: "Tenho direito a receber o valor retroativo desde quando pedi?",
     answer:
-      "Não obrigatoriamente. Realizamos o atendimento, análise documental e assinatura do contrato de forma 100% digital e segura.",
+      "Sim. Caso o benefício seja concedido judicialmente, você tem direito a receber todos os valores atrasados contados desde a Data do Requerimento Administrativo (DER) no INSS.",
   },
 ];
 
-export function FaqTrabalhista() {
+export function FaqPrevidenciario() {
   const [openFaq, setOpenFaq] = useState(null);
 
   const toggleFaq = (index) => {
@@ -38,7 +37,7 @@ export function FaqTrabalhista() {
           Tire Suas Dúvidas
         </span>
         <h2 className="font-news text-2xl md:text-3xl text-zinc-950 font-semibold mt-6">
-          Perguntas Frequentes sobre Direitos Trabalhistas
+          Perguntas Frequentes sobre Direito Previdenciário
         </h2>
       </div>
 
@@ -46,7 +45,7 @@ export function FaqTrabalhista() {
         {faqData.map((item, index) => (
           <div
             key={index}
-            className="bg-white border border-zinc-200 rounded-2xl overflow-hidden transition-all "
+            className="bg-white border border-zinc-200 rounded-2xl overflow-hidden transition-all"
           >
             <button
               onClick={() => toggleFaq(index)}

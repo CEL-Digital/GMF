@@ -5,33 +5,33 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const situationsData = [
   {
     id: "01",
-    title: "Demissão e Rescisão Indevida",
-    desc: "Divergências no cálculo do acerto final, atraso na quitação de verbas ou demissão por justa causa aplicada de forma abusiva e sem provas.",
+    title: "Elaboração e Revisão de Contratos",
+    desc: "Redação, análise e renegociação de contratos comerciais, prestação de serviços, locação e negócios jurídicos para mitigar riscos.",
   },
   {
     id: "02",
-    title: "Horas Extras e Banco de Horas",
-    desc: "Cumprimento de jornada além do limite legal sem o devido pagamento do adicional mínimo de 50% ou com controle de ponto fraudado.",
+    title: "Ações Imobiliárias e Posse",
+    desc: "Atuação em ações de despejo, usucapião, reintegração de posse, rescisão de promessa de compra e venda e regularização de imóveis.",
   },
   {
     id: "03",
-    title: "Trabalho Sem Carteira Assinada",
-    desc: "Prestação de serviço continuado e subordinado sem registro em CTPS, privando o trabalhador de FGTS, 13º e férias.",
+    title: "Ações de Cobrança e Execução de Títulos",
+    desc: "Recuperação judicial e extrajudicial de créditos, cheques, promissórias, duplicatas e descumprimentos de contratos.",
   },
   {
     id: "04",
-    title: "Desvio e Acúmulo de Função",
-    desc: "Exercício constante de atividades com responsabilidade superior ou incompatíveis com o cargo contratado sem o reajuste salarial devido.",
+    title: "Indenizações por Danos Morais e Materiais",
+    desc: "Reparação financeira por perdas patrimoniais, lucros cessantes, acidentes de trânsito e violações de direitos da personalidade.",
   },
   {
     id: "05",
-    title: "Assédio Moral e Dano Existencial",
-    desc: "Exposição a situações humilhantes, cobranças excessivas de metas ou isolamento deliberado no ambiente corporativo.",
+    title: "Responsabilidade Civil e Contratual",
+    desc: "Defesa e cobrança por descumprimento de obrigações, multas contratuais, prejuízos comerciais e falhas na prestação de serviços.",
   },
   {
     id: "06",
-    title: "Acidente de Trabalho e Doenças",
-    desc: "Lesões por esforço repetitivo (LER/DORT) ou acidentes físicos no trabalho que exigem indenizações por estabilidade e danos morais.",
+    title: "Disputas de Vizinhaça e Condominiais",
+    desc: "Resolução de conflitos de vizinhança, direito de construir, cobrança de quotas condominiais e problemas de gestão em condomínios.",
   },
 ];
 
@@ -63,7 +63,7 @@ const cardVariants = {
   }),
 };
 
-export function SituacoesTrabalhista() {
+export function SituacoesCivel() {
   const [[page, direction], setPage] = useState([0, 0]);
 
   const currentIndex = Math.abs(page % situationsData.length);
@@ -78,9 +78,7 @@ export function SituacoesTrabalhista() {
 
   return (
     <section className="relative py-16 w-full border-t border-zinc-200 overflow-x-hidden">
-      {/* Container Principal Alinhado com a Hero */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col gap-10 z-10 relative">
-        {/* Cabeçalho */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div className="max-w-xl">
             <span className="text-xs font-semibold text-zinc-500">
@@ -91,7 +89,6 @@ export function SituacoesTrabalhista() {
             </h2>
           </div>
 
-          {/* Botões Minimalistas */}
           <div className="flex items-center gap-2 self-end md:self-auto">
             <button
               onClick={() => paginate(-1)}
@@ -110,7 +107,6 @@ export function SituacoesTrabalhista() {
           </div>
         </div>
 
-        {/* Container dos Cards */}
         <div className="relative w-full flex justify-center items-center min-h-[340px] md:min-h-[280px]">
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
@@ -122,7 +118,6 @@ export function SituacoesTrabalhista() {
               exit="exit"
               className="absolute w-full grid grid-cols-1 md:grid-cols-2 gap-6"
             >
-              {/* Card 1 */}
               <div
                 className="bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-zinc-100 flex flex-col justify-between h-full min-h-[220px]"
                 style={{ boxShadow: "0 20px 40px -15px rgba(0,0,0,0.05)" }}
@@ -141,7 +136,6 @@ export function SituacoesTrabalhista() {
                 </div>
               </div>
 
-              {/* Card 2 */}
               <div
                 className="hidden md:flex bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-zinc-100 flex-col justify-between h-full min-h-[220px]"
                 style={{ boxShadow: "0 20px 40px -15px rgba(0,0,0,0.05)" }}
@@ -163,7 +157,6 @@ export function SituacoesTrabalhista() {
           </AnimatePresence>
         </div>
 
-        {/* Indicadores de Paginação */}
         <div className="flex justify-center gap-2.5 mt-2">
           {situationsData.map((_, idx) => (
             <button

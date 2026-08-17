@@ -5,33 +5,33 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const situationsData = [
   {
     id: "01",
-    title: "Demissão e Rescisão Indevida",
-    desc: "Divergências no cálculo do acerto final, atraso na quitação de verbas ou demissão por justa causa aplicada de forma abusiva e sem provas.",
+    title: "Aposentadoria Negada ou Incorreta",
+    desc: "Aposentadorias por idade, tempo de contribuição ou especial indeferidas indevidamente pelo INSS ou concedidas com valor inferior ao correto.",
   },
   {
     id: "02",
-    title: "Horas Extras e Banco de Horas",
-    desc: "Cumprimento de jornada além do limite legal sem o devido pagamento do adicional mínimo de 50% ou com controle de ponto fraudado.",
+    title: "Auxílio-Doença e Incapacidade",
+    desc: "Cessação indevida ou negação de benefício por incapacidade temporária ou permanente após perícia médica desfavorável do INSS.",
   },
   {
     id: "03",
-    title: "Trabalho Sem Carteira Assinada",
-    desc: "Prestação de serviço continuado e subordinado sem registro em CTPS, privando o trabalhador de FGTS, 13º e férias.",
+    title: "BPC / LOAS (Idoso e PCD)",
+    desc: "Benefício assistencial negado sob alegação de renda familiar superior ao limite ou por não reconhecimento da deficiência em perícia.",
   },
   {
     id: "04",
-    title: "Desvio e Acúmulo de Função",
-    desc: "Exercício constante de atividades com responsabilidade superior ou incompatíveis com o cargo contratado sem o reajuste salarial devido.",
+    title: "Pensão por Morte",
+    desc: "Recusa de concessão de pensão aos dependentes por falta de comprovação de união estável ou alegada perda da qualidade de segurado.",
   },
   {
     id: "05",
-    title: "Assédio Moral e Dano Existencial",
-    desc: "Exposição a situações humilhantes, cobranças excessivas de metas ou isolamento deliberado no ambiente corporativo.",
+    title: "Planejamento Previdenciário",
+    desc: "Análise prévia de tempo de contribuição e simulação do melhor momento para se aposentar com o maior valor de benefício possível.",
   },
   {
     id: "06",
-    title: "Acidente de Trabalho e Doenças",
-    desc: "Lesões por esforço repetitivo (LER/DORT) ou acidentes físicos no trabalho que exigem indenizações por estabilidade e danos morais.",
+    title: "Revisão de Benefício (RMI)",
+    desc: "Recálculo de renda mensal inicial para inclusão de períodos trabalhados não computados, vínculo insalubre ou erro de apuração.",
   },
 ];
 
@@ -63,7 +63,7 @@ const cardVariants = {
   }),
 };
 
-export function SituacoesTrabalhista() {
+export function SituacoesPrevidenciario() {
   const [[page, direction], setPage] = useState([0, 0]);
 
   const currentIndex = Math.abs(page % situationsData.length);
@@ -78,9 +78,7 @@ export function SituacoesTrabalhista() {
 
   return (
     <section className="relative py-16 w-full border-t border-zinc-200 overflow-x-hidden">
-      {/* Container Principal Alinhado com a Hero */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col gap-10 z-10 relative">
-        {/* Cabeçalho */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div className="max-w-xl">
             <span className="text-xs font-semibold text-zinc-500">
@@ -91,7 +89,6 @@ export function SituacoesTrabalhista() {
             </h2>
           </div>
 
-          {/* Botões Minimalistas */}
           <div className="flex items-center gap-2 self-end md:self-auto">
             <button
               onClick={() => paginate(-1)}
@@ -110,7 +107,6 @@ export function SituacoesTrabalhista() {
           </div>
         </div>
 
-        {/* Container dos Cards */}
         <div className="relative w-full flex justify-center items-center min-h-[340px] md:min-h-[280px]">
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
@@ -122,7 +118,6 @@ export function SituacoesTrabalhista() {
               exit="exit"
               className="absolute w-full grid grid-cols-1 md:grid-cols-2 gap-6"
             >
-              {/* Card 1 */}
               <div
                 className="bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-zinc-100 flex flex-col justify-between h-full min-h-[220px]"
                 style={{ boxShadow: "0 20px 40px -15px rgba(0,0,0,0.05)" }}
@@ -141,7 +136,6 @@ export function SituacoesTrabalhista() {
                 </div>
               </div>
 
-              {/* Card 2 */}
               <div
                 className="hidden md:flex bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-zinc-100 flex-col justify-between h-full min-h-[220px]"
                 style={{ boxShadow: "0 20px 40px -15px rgba(0,0,0,0.05)" }}
@@ -163,7 +157,6 @@ export function SituacoesTrabalhista() {
           </AnimatePresence>
         </div>
 
-        {/* Indicadores de Paginação */}
         <div className="flex justify-center gap-2.5 mt-2">
           {situationsData.map((_, idx) => (
             <button

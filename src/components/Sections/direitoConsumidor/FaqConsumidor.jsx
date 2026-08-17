@@ -2,29 +2,30 @@ import { useState } from "react";
 
 const faqData = [
   {
-    question: "Quanto tempo tenho para entrar com uma ação trabalhista?",
+    question:
+      "Meu nome foi negativado indevidamente. Tenho direito a indenização?",
     answer:
-      "O prazo legal é de até 2 anos após o desligamento da empresa. Na ação, é possível cobrar os direitos referentes aos últimos 5 anos trabalhados.",
-  },
-  {
-    question: "Quais documentos preciso ter em mãos para a primeira consulta?",
-    answer:
-      "Sua Carteira de Trabalho (física ou digital), Termo de Rescisão (TRCT), últimos holerites, extrato analítico do FGTS e provas de conversas (mensagens, e-mails ou fotos).",
-  },
-  {
-    question: "Posso entrar com ação mesmo sem ter carteira assinada?",
-    answer:
-      "Sim. Se você cumpria horários, recebia ordens e recebia salário, a Justiça reconhece o vínculo empregatício e garante todos os direitos do período retroativo.",
+      "Sim. A inscrição indevida do nome nos órgãos de proteção ao crédito (Serasa/SPC) gera o direito à baixa imediata da negativação via liminar e indenização por danos morais.",
   },
   {
     question:
-      "Preciso ir pessoalmente até o escritório para iniciar o processo?",
+      "Fui vítima do golpe do Pix ou fraude bancária. O banco é responsável?",
     answer:
-      "Não obrigatoriamente. Realizamos o atendimento, análise documental e assinatura do contrato de forma 100% digital e segura.",
+      "Sim. As instituições financeiras respondem objetivamente pelas falhas de segurança em seus sistemas que permitam transações atípicas e fraudes praticadas por terceiros.",
+  },
+  {
+    question: "O plano de saúde negou meu tratamento. O que posso fazer?",
+    answer:
+      "É possível ingressar com uma ação judicial com pedido de liminar (decisão de urgência) para obrigar o plano de saúde a custear o tratamento recomendado pelo médico responsável.",
+  },
+  {
+    question: "Fiz uma compra pela internet e me arrependi. Posso cancelar?",
+    answer:
+      "Sim. O artigo 49 do Código de Defesa do Consumidor garante o direito de arrependimento em até 7 dias após o recebimento do produto, com devolução integral dos valores pagos.",
   },
 ];
 
-export function FaqTrabalhista() {
+export function FaqConsumidor() {
   const [openFaq, setOpenFaq] = useState(null);
 
   const toggleFaq = (index) => {
@@ -38,7 +39,7 @@ export function FaqTrabalhista() {
           Tire Suas Dúvidas
         </span>
         <h2 className="font-news text-2xl md:text-3xl text-zinc-950 font-semibold mt-6">
-          Perguntas Frequentes sobre Direitos Trabalhistas
+          Perguntas Frequentes sobre Direito do Consumidor
         </h2>
       </div>
 
@@ -46,7 +47,7 @@ export function FaqTrabalhista() {
         {faqData.map((item, index) => (
           <div
             key={index}
-            className="bg-white border border-zinc-200 rounded-2xl overflow-hidden transition-all "
+            className="bg-white border border-zinc-200 rounded-2xl overflow-hidden transition-all"
           >
             <button
               onClick={() => toggleFaq(index)}

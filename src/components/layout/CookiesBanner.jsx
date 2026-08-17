@@ -47,35 +47,35 @@ export function CookieBanner() {
         <h3 className="text-base font-semibold px-5 pt-4 font-news">
           Controle de Privacidade
         </h3>
-        
+
         <p className="text-xs px-5">
-          Utilizamos cookies para analisar o tráfego do site e melhorar a sua experiência.
+          Utilizamos cookies para analisar o tráfego do site e melhorar a sua
+          experiência.
         </p>
 
         <div className="flex gap-2 justify-between px-5 pb-3 items-center">
-            <div className="text-xs">
-                <Link 
-            to="/politica-de-privacidade" 
-            className="text-blue-400 hover:text-blue-300 duration-400"
-          >
-            Política de Privacidade
-          </Link>
-            </div>
-            <div>
-                <button
-                    onClick={handleDecline}
-                    className="px-4 py-2 text-xs font-medium text-slate-400 hover:text-slate-600 rounded-4xl transition-colors cursor-pointer duration-400"
-                >
-                    Recusar
-                </button>
-                <button
-                    onClick={handleAccept}
-                    className="px-4 py-2 text-xs font-semibold text-white bg-brand-dark-blue hover:opacity-90 rounded-4xl shadow transition-all cursor-pointer duration-400"
-                >
-                    Aceitar Cookies
-                </button>
-
-            </div>
+          <div className="text-xs">
+            <Link
+              to="/politica-de-privacidade"
+              className="text-blue-400 hover:text-blue-300 duration-400"
+            >
+              Política de Privacidade
+            </Link>
+          </div>
+          <div>
+            <button
+              onClick={handleDecline}
+              className="px-4 py-2 text-xs font-medium text-slate-400 hover:text-slate-600 rounded-4xl transition-colors cursor-pointer duration-400"
+            >
+              Recusar
+            </button>
+            <button
+              onClick={handleAccept}
+              className="px-4 py-2 text-xs font-semibold text-white bg-brand-dark-blue hover:opacity-90 rounded-4xl shadow transition-all cursor-pointer duration-400"
+            >
+              Aceitar Cookies
+            </button>
+          </div>
         </div>
       </div>
     </div>

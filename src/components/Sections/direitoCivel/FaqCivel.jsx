@@ -2,29 +2,28 @@ import { useState } from "react";
 
 const faqData = [
   {
-    question: "Quanto tempo tenho para entrar com uma ação trabalhista?",
+    question: "O que fazer em caso de descumprimento de contrato?",
     answer:
-      "O prazo legal é de até 2 anos após o desligamento da empresa. Na ação, é possível cobrar os direitos referentes aos últimos 5 anos trabalhados.",
+      "A parte lesada pode exigir judicialmente o cumprimento forçado da obrigação, a rescisão do contrato com aplicação das multas previstas ou a indenização pelas perdas e danos decorrentes da inadimplência.",
   },
   {
-    question: "Quais documentos preciso ter em mãos para a primeira consulta?",
+    question: "Qual o prazo para cobrar uma dívida na Justiça?",
     answer:
-      "Sua Carteira de Trabalho (física ou digital), Termo de Rescisão (TRCT), últimos holerites, extrato analítico do FGTS e provas de conversas (mensagens, e-mails ou fotos).",
+      "Depende da natureza da dívida. A cobrança de cheques, notas promissórias e contratos expressos costuma prescrever em 5 anos, enquanto outros tipos de reparação civil podem ter prazos específicos entre 3 e 5 anos.",
   },
   {
-    question: "Posso entrar com ação mesmo sem ter carteira assinada?",
+    question: "Como funciona a ação de despejo por falta de pagamento?",
     answer:
-      "Sim. Se você cumpria horários, recebia ordens e recebia salário, a Justiça reconhece o vínculo empregatício e garante todos os direitos do período retroativo.",
+      "Diante do atraso no aluguel, o locador pode ingressar com a ação requerendo a desocupação do imóvel e a cobrança dos valores devidos, sendo possível obter ordem liminar de desocupação em prazos reduzidos em certos contratos.",
   },
   {
-    question:
-      "Preciso ir pessoalmente até o escritório para iniciar o processo?",
+    question: "É possível resolver disputas civis sem entrar na Justiça?",
     answer:
-      "Não obrigatoriamente. Realizamos o atendimento, análise documental e assinatura do contrato de forma 100% digital e segura.",
+      "Sim. A negociação extrajudicial, a mediação e o envio de notificações formais são ferramentas altamente eficazes para alcançar acordos de forma mais célere e menos onerosa.",
   },
 ];
 
-export function FaqTrabalhista() {
+export function FaqCivel() {
   const [openFaq, setOpenFaq] = useState(null);
 
   const toggleFaq = (index) => {
@@ -38,7 +37,7 @@ export function FaqTrabalhista() {
           Tire Suas Dúvidas
         </span>
         <h2 className="font-news text-2xl md:text-3xl text-zinc-950 font-semibold mt-6">
-          Perguntas Frequentes sobre Direitos Trabalhistas
+          Perguntas Frequentes sobre Direito Cível
         </h2>
       </div>
 
@@ -46,7 +45,7 @@ export function FaqTrabalhista() {
         {faqData.map((item, index) => (
           <div
             key={index}
-            className="bg-white border border-zinc-200 rounded-2xl overflow-hidden transition-all "
+            className="bg-white border border-zinc-200 rounded-2xl overflow-hidden transition-all"
           >
             <button
               onClick={() => toggleFaq(index)}
