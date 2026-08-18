@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { HeroConsumidor } from "../components/sections/direitoConsumidor/HeroConsumidor";
-import { SituacoesConsumidor } from "../components/sections/direitoConsumidor/SituacoesConsumidor";
-import { ProcessoConsumidor } from "../components/sections/direitoConsumidor/ProcessoConsumidor";
-import { FaqConsumidor } from "../components/sections/direitoConsumidor/FaqConsumidor";
-import { CtaFinalConsumidor } from "../components/sections/direitoConsumidor/CtaFinalConsumidor";
+import { HeroConsumidor } from "../components/sections/consumidor/HeroConsumidor";
+import { SituacoesConsumidor } from "../components/sections/consumidor/SituacoesConsumidor";
+import { ProcessoConsumidor } from "../components/sections/consumidor/ProcessoConsumidor";
+import { FaqConsumidor } from "../components/sections/consumidor/FaqConsumidor";
+import { CtaFinalConsumidor } from "../components/sections/consumidor/CtaFinalConsumidor";
 
 export function DireitoConsumidor() {
   useEffect(() => {

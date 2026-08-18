@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { HeroFamilia } from "../components/sections/direitoFamilia/HeroFamilia";
-import { SituacoesFamilia } from "../components/sections/direitoFamilia/SituacoesFamilia";
-import { ProcessoFamilia } from "../components/sections/direitoFamilia/ProcessoFamilia";
-import { FaqFamilia } from "../components/sections/direitoFamilia/FaqFamilia";
-import { CtaFinalFamilia } from "../components/sections/direitoFamilia/CtaFinalFamilia";
+import { HeroFamilia } from "../components/sections/familia/HeroFamilia";
+import { SituacoesFamilia } from "../components/sections/familia/SituacoesFamilia";
+import { ProcessoFamilia } from "../components/sections/familia/ProcessoFamilia";
+import { FaqFamilia } from "../components/sections/familia/FaqFamilia";
+import { CtaFinalFamilia } from "../components/sections/familia/CtaFinalFamilia";
 
 export function DireitoFamilia() {
   useEffect(() => {

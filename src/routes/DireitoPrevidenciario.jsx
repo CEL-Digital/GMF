@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { HeroPrevidenciario } from "../components/sections/direitoPrevidenciario/HeroPrevidenciario";
-import { SituacoesPrevidenciario } from "../components/sections/direitoPrevidenciario/SituacoesPrevidenciario";
-import { ProcessoPrevidenciario } from "../components/sections/direitoPrevidenciario/ProcessoPrevidenciario";
-import { FaqPrevidenciario } from "../components/sections/direitoPrevidenciario/FaqPrevidenciario";
-import { CtaFinalPrevidenciario } from "../components/sections/direitoPrevidenciario/CtaFinalPrevidenciario";
+import { HeroPrevidenciario } from "../components/sections/previdenciario/HeroPrevidenciario";
+import { SituacoesPrevidenciario } from "../components/sections/previdenciario/SituacoesPrevidenciario";
+import { ProcessoPrevidenciario } from "../components/sections/previdenciario/ProcessoPrevidenciario";
+import { FaqPrevidenciario } from "../components/sections/previdenciario/FaqPrevidenciario";
+import { CtaFinalPrevidenciario } from "../components/sections/previdenciario/CtaFinalPrevidenciario";
 
 export function DireitoPrevidenciario() {
   useEffect(() => {

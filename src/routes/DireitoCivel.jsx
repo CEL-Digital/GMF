@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { HeroCivel } from "../components/sections/direitoCivel/HeroCivel";
-import { SituacoesCivel } from "../components/sections/direitoCivel/SituacoesCivel";
-import { ProcessoCivel } from "../components/sections/direitoCivel/ProcessoCivel";
-import { FaqCivel } from "../components/sections/direitoCivel/FaqCivel";
-import { CtaFinalCivel } from "../components/sections/direitoCivel/CtaFinalCivel";
+import { HeroCivel } from "../components/sections/civel/HeroCivel";
+import { SituacoesCivel } from "../components/sections/civel/SituacoesCivel";
+import { ProcessoCivel } from "../components/sections/civel/ProcessoCivel";
+import { FaqCivel } from "../components/sections/civel/FaqCivel";
+import { CtaFinalCivel } from "../components/sections/civel/CtaFinalCivel";
 
 export function DireitoCivel() {
   useEffect(() => {
