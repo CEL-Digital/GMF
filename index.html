@@ -1,30 +1,89 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
+    <!-- 1. Configurações Básicas e Otimização de Performance -->
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GMF Advogados | Advocacia Geral</title>    <meta
+      name="description"
+      content="Escritório de advocacia especializado em direito [Trabalhista/Civil/Criminalista/Familiar/Consumidor/Previdenciario]. Atendimento humanizado e focado na solução de litígios. Entre em contato."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://advogadosgmf.com.br/" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- 2. Favicons e Ícones de Marca -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- 3. Preconnect de Fontes (Performance) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
       rel="stylesheet"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google Consent Mode v2 (Estado inicial: NEGADO) -->
+
+    <!-- 4. Open Graph / Facebook / WhatsApp / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://advogadosgmf.com.br/" />
+    <meta property="og:title" content="GMF Advogados" />
+    <meta
+      property="og:description"
+      content="Atendimento jurídico especializado com foco em resultados rápidos e defesa dos seus direitos."
+    />
+    <meta property="og:image" content="https://advogadosgmf.com.br/og-image.jpg" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="GMF Advogados" />
+
+    <!-- 5. Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://advogadosgmf.com.br/" />
+    <meta name="twitter:title" content="GMF Advogados" />
+    <meta
+      name="twitter:description"
+      content="Atendimento jurídico especializado com foco em resultados rápidos e defesa dos seus direitos."
+    />
+    <meta name="twitter:image" content="https://advogadosgmf.com.br/og-image.jpg" />
+
+    <!-- 6. Schema.org / Dados Estruturados (SEO Local para Google) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "GMF Advogados",
+        "image": "https://advogadosgmf.com.br/og-image.jpg",
+        "@id": "https://advogadosgmf.com.br/#organization",
+        "url": "https://advogadosgmf.com.br/",
+        "telephone": "+5511999999999",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Exemplo, 100 - Sala 50",
+          "addressLocality": "São Paulo",
+          "addressRegion": "SP",
+          "postalCode": "00000-000",
+          "addressCountry": "BR"
+        },
+        "priceRange": "$$"
+      }
+    </script>
+
+    <!-- 7. Google Consent Mode v2 -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
 
-      // Define o estado padrão como negado ANTES do script do GA carregar
       gtag("consent", "default", {
         analytics_storage: "denied",
         ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied"
       });
     </script>
 
-    <!-- Script do Google Analytics (Substitua 'G-SEU_ID_AQUI' pelo seu ID real) -->
+    <!-- 8. Script do Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-SEU_ID_AQUI"
@@ -33,7 +92,6 @@
       gtag("js", new Date());
       gtag("config", "G-SEU_ID_AQUI");
     </script>
-    <title>GMF Advogados</title>
   </head>
   <body>
     <div id="root"></div>

@@ -1,0 +1,16 @@
+# Permitir o rastreamento de todos os buscadores nas áreas públicas
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /admin/
+Disallow: /painel/
+Disallow: /cgi-bin/
+Disallow: /*?s=
+Disallow: /search/
+
+# Permitir acesso aos arquivos de mídia e estilos
+Allow: /wp-admin/admin-ajax.php
+Allow: /wp-content/uploads/
+
+# Indicador do Mapa do Site (Sitemap XML)
+Sitemap: https://advogadosgmf.com.br/sitemap.xml

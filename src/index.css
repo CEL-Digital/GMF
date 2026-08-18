@@ -15,3 +15,13 @@
     opacity: 0;
   }
 }
+
+::selection {
+  background-color: #031428; /* zinc-950 */
+  color: #ffffff;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

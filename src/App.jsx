@@ -10,6 +10,7 @@ import { DireitoConsumidor } from "./routes/DireitoConsumidor";
 import { PoliticaDePrivacidade } from "./routes/PoliticaDePrivacidade.jsx";
 import { Footer } from "./components/layout/Footer";
 import { CookieBanner } from "./components/layout/CookiesBanner.jsx";
+import { NotFound } from "./routes/NotFound";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             path="/politica-de-privacidade"
             element={<PoliticaDePrivacidade />}
           />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
         <CookieBanner />

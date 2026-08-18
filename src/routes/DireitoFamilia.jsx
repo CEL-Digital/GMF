@@ -14,6 +14,10 @@ export function DireitoFamilia() {
     });
   }, []);
 
+  useEffect(() => {
+    document.title = "Direito de Família | GMF Advogados";
+  }, []);
+
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-900 pt-32 pb-20">
       <HeroFamilia />
