@@ -77,7 +77,7 @@ export function Footer() {
                   to="/politica-de-privacidade"
                   className="hover:text-white transition-colors"
                 >
-                  Política de Privacidade
+                  Política de Privacidade & Termos de Uso
                 </Link>
               </li>
             </ul>

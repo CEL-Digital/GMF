@@ -1,6 +1,13 @@
-import { useLocation } from "react-router-dom";
 import SessaoPolitica from "../components/Sections/politicaDePrivacidade/SessaoPolitica";
+import SessaoTermos from "../components/Sections/politicaDePrivacidade/SessaoTermos";
 
 export function PoliticaDePrivacidade() {
-  return <SessaoPolitica />;
+  return (
+    <div>
+      <SessaoPolitica />
+      <SessaoTermos />
+    </div>
+  );
 }
+
+export default PoliticaDePrivacidade;
