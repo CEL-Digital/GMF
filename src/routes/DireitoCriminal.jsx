@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { HeroCriminal } from "../components/sections/criminal/HeroCriminal";
-import { SituacoesCriminal } from "../components/sections/criminal/SituacoesCriminal";
-import { ProcessoCriminal } from "../components/sections/criminal/ProcessoCriminal";
-import { FaqCriminal } from "../components/sections/criminal/FaqCriminal";
-import { CtaFinalCriminal } from "../components/sections/criminal/CtaFinalCriminal";
+import { HeroCriminal } from "../components/Sections/criminal/HeroCriminal";
+import { SituacoesCriminal } from "../components/Sections/criminal/SituacoesCriminal";
+import { ProcessoCriminal } from "../components/Sections/criminal/ProcessoCriminal";
+import { FaqCriminal } from "../components/Sections/criminal/FaqCriminal";
+import { CtaFinalCriminal } from "../components/Sections/criminal/CtaFinalCriminal";
 
 export function DireitoCriminal() {
   useEffect(() => {
