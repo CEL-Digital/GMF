@@ -1,5 +1,6 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import imageLogo from "../../assets/logoGMFAzulEscuro.webp";
+import instagramSvg from "../../assets/instagram-svgrepo-com.svg"
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -42,6 +43,14 @@ export function Footer() {
               técnico, acompanhamento preventivo e defesa incisiva para a
               proteção dos seus direitos.
             </p>
+
+            <a href="https://www.instagram.com/gmf.advogados?igsh=MWxuOTQ5cWJhdjhmMw==" className="cursor-pointer">
+              <img
+                src={instagramSvg}
+                alt="GMF Advogados"
+                className="h-5 w-auto object-contain brightness-0 invert"
+              />
+            </a>
           </div>
 
           {/* COLUNA 2: Navegação Rápida (3 Colunas) */}
